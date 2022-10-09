@@ -1,0 +1,19 @@
+#section_contacto {
+    background-color: #D677A2;
+}
+
+#btn_sendmsg {
+    background-color: #bc226f;
+    color: #fff;
+    padding: 0.5rem;
+
+
+}
+
+.imagen_fondo {
+    background-image: url(https://www.interitehealthcare.com.au/wp-content/uploads/2020/12/woman-visiting-female-doctor-2048x1309.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
