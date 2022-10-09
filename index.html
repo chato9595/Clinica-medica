@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="./styleContacto.css" />
   </head>
   <body>
-    <div class="imagen_fondo ">
+    <div class="imagen_fondo d-flex flex-column align-items-end ">
 
     
-    <section class="p-3 rounded mb-3 w-50  " id="section_contacto">
+    <section class="p-3 rounded mb-3" id="section_contacto">
       <h2 class="text-light">Contacto</h2>
       <form id="formMensaje">
         <div class="input-group mb-3">
@@ -57,14 +57,21 @@
           <textarea
             required
             id="textAreaMensaje"
-            rows="3"
+            rows="5"
             placeholder="Escriba su mensaje"
             class="form-control"
             maxlength="200"
           ></textarea>
         </div>
+        <div class="my-2 form-check">
+          <input type="checkbox" class="form-check-input" id="Check1" />
+          <label class="form-check-label text-light" for="Check1"
+            >He leído y acepto la política de privacidad y protección de
+            datos</label
+          >
+        </div>
         <div class="text-end">
-          <button type="submit" class="btn mt-2" id="btn_sendmsg">
+          <button type="submit" class="btn mt-2 btn-secondary" id="btn_sendmsg">
             Enviar mensaje
           </button>
         </div>
