@@ -20,81 +20,119 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styleContacto.css" />
+    <script
+      src="https://kit.fontawesome.com/88922d1405.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+  
   <body>
-    <div class="imagen_fondo d-flex flex-column align-items-end ">
-
-    
-    <section class="p-3 rounded mb-3" id="section_contacto">
-      <h2 class="text-light">Contacto</h2>
-      <form id="formMensaje">
-        <div class="input-group mb-3">
-          <input
-            required
-            type="text"
-            class="form-control"
-            placeholder="Ingrese su nombre"
-            aria-label="name"
-            aria-describedby="basic-addon1"
-            maxlength="70"
-          />
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">@</span>
-          <input
-            required
-            type="text"
-            class="form-control"
-            placeholder="Correo electrónico"
-            aria-label="email"
-            aria-describedby="basic-addon1"
-            maxlength="70"
-            
-          />
-        </div>
-        <div>
-          <label class="my-2 text-light fs-5 ">Mensaje</label>
-          <textarea
-            required
-            id="textAreaMensaje"
-            rows="5"
-            placeholder="Escriba su mensaje"
-            class="form-control"
-            maxlength="200"
-          ></textarea>
-        </div>
-        <div class="my-2 form-check">
-          <input type="checkbox" class="form-check-input" id="Check1" />
-          <label class="form-check-label text-light" for="Check1"
-            >He leído y acepto la política de privacidad y protección de
-            datos</label
-          >
-        </div>
-        <div class="text-end">
-          <button type="submit" class="btn mt-2 btn-secondary" id="btn_sendmsg">
-            Enviar mensaje
-          </button>
-        </div>
-      </form>
-    </section>
-  </div>
-    <div class="container">
-      <h2 class="text-center">Dirección</h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2972.1447050876386!2d-65.20812463105585!3d-26.836516461177272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1665274406139!5m2!1ses-419!2sar"
-        width="60%"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        class="mx-auto d-block rounded"
-      ></iframe>
+    <div class="imagen_fondo d-flex flex-column align-items-end">
+      <section class="p-3 rounded" id="section_contacto">
+        <h2 class="text-light fs-1">Consultas</h2>
+        <form id="formMensaje">
+          <div class="input-group mb-3">
+            <input
+              id="nombreContacto"
+              required
+              type="text"
+              class="form-control"
+              placeholder="Ingrese su nombre"
+              aria-label="name"
+              aria-describedby="basic-addon1"
+              maxlength="70"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              required
+              type="number"
+              class="form-control"
+              placeholder="Teléfono"
+              aria-label="telephone"
+              aria-describedby="basic-addon1"
+              min="0"
+              oninput="validity.valid||(value='');"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input
+              required
+              type="text"
+              class="form-control"
+              placeholder="Correo electrónico"
+              aria-label="email"
+              aria-describedby="basic-addon1"
+              maxlength="70"
+            />
+          </div>
+          <div>
+            <label class="my-2 text-light fs-5">Mensaje</label>
+            <textarea
+              required
+              id="textAreaMensaje"
+              rows="5"
+              placeholder="Escriba su consulta"
+              class="form-control"
+              maxlength="200"
+            ></textarea>
+          </div>
+          <div class="my-2 form-check">
+            <input type="checkbox" class="form-check-input" id="Check1" />
+            <label class="form-check-label text-light" for="Check1"
+              >He leído y acepto la política de privacidad y protección de
+              datos</label
+            >
+          </div>
+          <div class="text-end">
+            <button
+              type="submit"
+              class="btn mt-2 btn-secondary"
+              id="btn_sendmsg"
+            >
+              Enviar mensaje
+            </button>
+          </div>
+        </form>
+      </section>
     </div>
+    <div class="container">
+      <section class="row col">
+        <h2 id="title_contacto" class="text-center my-5 display-4 ">Contacto</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2972.1447050876386!2d-65.20812463105585!3d-26.836516461177272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1665274406139!5m2!1ses-419!2sar"
+          width="80%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="mx-auto d-block rounded my-3 col-lg-6"
+        ></iframe>
+        <article class="col-lg-6 d-flex flex-column justify-content-center">
+         
+          <h3 id="title_contact" class="text-center fs-4">Dirección</h3>
+          <p class="text-center">
+          General Paz 576, San Miguel de Tucumán, Tucumán
+          </p>
+          <h3 id="title_contact" class="text-center fs-4">Teléfono</h3>
+          <p class="text-center">0381 422-5281</p>
+          <h3 id="title_contact" class="text-center fs-4">Email</h3>
+          <p class="text-center">wmassistance@gmail.com</p>
+        </article>
+      </section>
+    </div>
+
+    <div id="button-up">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script src="./contacto.js"></script>
   </body>
 </html>
