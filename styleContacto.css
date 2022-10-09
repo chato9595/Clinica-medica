@@ -1,24 +1,23 @@
 #section_contacto {
     background-color: #D677A2;
-    width: 35%; 
-    height: auto%;
-    
-    
+    width: 35%;
+     height: auto;
 }
 
 #btn_sendmsg {
-   
-    
+
+
     color: #ffffff;
     padding: 0.5rem;
 
 
 }
+
 #btn_sendmsg:hover {
-    background-color:#bc226f;
+    background-color: #bc226f;
     color: rgb(255, 255, 255);
     padding: 0.5rem;
-    
+
 }
 
 
