@@ -19,13 +19,131 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styleContacto.css" />
+    <link rel="stylesheet" href="./styleCRUDpac.css" />
     <script
       src="https://kit.fontawesome.com/88922d1405.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="./styleCRUDpac.css" />
   </head>
-  
+  <body>
+    <main class="container">
+      <section class="text-center">
+        <h1>Cargar Paciente</h1>
+        <hr />
+        </section>
+        <section class="bg-secondary container text-light py-3 rounded">
+        <form id="formPaciente">
+          <div class="mb-3">
+            <label for="nombrePaciente" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombrePaciente"
+              placeholder="Nombre completo"
+            />
+            <div id="nombrePaciente__feedback" class="invalid-feedback">
+              Ingrese un nombre válido
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="FnacPaciente" class="form-label"
+              >Fecha de Nacimiento</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="FnacPaciente"
+              placeholder="dd/mm/aaaa"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="DniPaciente" class="form-label"
+              >Numero de Documento</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="DniPaciente"
+              placeholder="DNI"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="telefonoPaciente" class="form-label">Telefono</label>
+            <input
+              type="text"
+              class="form-control"
+              id="telefonoPaciente"
+              placeholder="381 123 4567"
+            />
+            <div id="telefonoPaciente__feedback" class="invalid-feedback">
+              Ingrese un telefono válido
+            </div>
+          </div>
+          <div>
+            <label class="mb-2 text-light">Seleccione Obra social</label>
+            <select class="form-select" id="OsPaciente">
+              <option value="0">Seleccione</option>
+              <option value="OSDE">OSDE</option>
+              <option value="Swiss Medical">Swiss Medical</option>
+              <option value="Subsidio de Salud">Subsidio de Salud</option>
+              <option value="OSECAC">OSECAC</option>
+              <option value="Boreal">Boreal</option>
+              <option value="Red de Seguro Medico">Red de Seguro Medico</option>
+              <option value="Otra">Otra</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="mb-2 text-light">Seleccione sexo</label>
+            <select class="form-select" id="sexoPaciente">
+              <option value="0">Seleccione</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="emailPaciente" class="form-label">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="emailPaciente"
+              placeholder="usuario@gmail.com"
+            />
+            <div id="emailPaciente__feedback" class="invalid-feedback">
+              Ingrese un email válido
+            </div>
+          </div>
+
+          <div class="text-end">
+            <button id="buttonCargar" class="btn btn-danger" type="submit">
+              Cargar
+            </button>
+          </div>
+        </form>
+      </section>
+      <section>
+        <table class="table">
+          
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Documento</th>
+                <th>Telefono</th>
+                <th>Obra Social</th>
+                <th>Sexo</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody id="tbody_tablaPacientes">
+            </tbody>
+        </table>
+      </section>
+    </main>
     <div id="button-up">
       <i class="fas fa-chevron-up"></i>
     </div>
@@ -35,6 +153,7 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./js/CRUDpac.js"></script>
   </body>
 </html>
