@@ -29,10 +29,13 @@
   <body>
     <main class="container">
       <section class="text-center">
-        <h1>Cargar Paciente</h1>
         <hr />
-        </section>
-        <section class="bg-secondary container text-light py-3 rounded">
+        <h1 id="h1_cargarPac">CARGAR PACIENTE</h1>
+        <hr />
+      </section>
+      <section
+        class="bg-secondary container text-light py-3 rounded col-lg-6 col-sm-12"
+      >
         <form id="formPaciente">
           <div class="mb-3">
             <label for="nombrePaciente" class="form-label">Nombre</label>
@@ -85,18 +88,18 @@
             <label class="mb-2 text-light">Seleccione Obra social</label>
             <select class="form-select" id="OsPaciente">
               <option value="0">Seleccione</option>
+              <option value="Particular">Particular</option>
               <option value="OSDE">OSDE</option>
               <option value="Swiss Medical">Swiss Medical</option>
               <option value="Subsidio de Salud">Subsidio de Salud</option>
               <option value="OSECAC">OSECAC</option>
               <option value="Boreal">Boreal</option>
               <option value="Red de Seguro Medico">Red de Seguro Medico</option>
-              <option value="Otra">Otra</option>
             </select>
           </div>
 
           <div>
-            <label class="mb-2 text-light">Seleccione sexo</label>
+            <label class="my-2 text-light">Seleccione sexo</label>
             <select class="form-select" id="sexoPaciente">
               <option value="0">Seleccione</option>
               <option value="Femenino">Femenino</option>
@@ -105,7 +108,7 @@
             </select>
           </div>
 
-          <div class="mb-3">
+          <div class="my-3">
             <label for="emailPaciente" class="form-label">Email</label>
             <input
               type="text"
@@ -119,28 +122,25 @@
           </div>
 
           <div class="text-end">
-            <button id="buttonCargar" class="btn btn-danger" type="submit">
-              Cargar
-            </button>
+            <button id="buttonCargar" class="btn" type="submit">Cargar</button>
           </div>
         </form>
       </section>
-      <section>
-        <table class="table">
-          
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Edad</th>
-                <th>Documento</th>
-                <th>Telefono</th>
-                <th>Obra Social</th>
-                <th>Sexo</th>
-                <th>Email</th>
-              </tr>
-            </thead>
-            <tbody id="tbody_tablaPacientes">
-            </tbody>
+      <section class="container">
+        <table id="tabla_paciente" class="table ">
+          <thead>
+            <tr id="tableROW">
+              <th>Nombre</th>
+              <th>Edad</th>
+              <th>Documento</th>
+              <th>Telefono</th>
+              <th>Obra Social</th>
+              <th>Sexo</th>
+              <th>Email</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tbody_tablaPacientes"></tbody>
         </table>
       </section>
     </main>

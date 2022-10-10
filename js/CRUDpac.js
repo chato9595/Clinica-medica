@@ -136,6 +136,7 @@ formularioPaciente.addEventListener("submit", (e) => {
         title: "Exito!",
         text: "Paciente cargado correctamente",
         icon: "success",
+        
       });
     } else {
       const dniTarget = sessionStorage.getItem("dni");
@@ -156,6 +157,7 @@ formularioPaciente.addEventListener("submit", (e) => {
         title: "Exito!",
         text: "Datos modificados correctamente",
         icon: "success",
+        
       });
       buttonCargar.innerHTML = "Cargar";
     }
@@ -180,6 +182,8 @@ formularioPaciente.addEventListener("submit", (e) => {
       title: "Error!",
       text: "Datos incorrectos",
       icon: "error",
+      
+
     });
   }
 });
@@ -188,6 +192,7 @@ export const actualizarTabla = () => {
   const listPacientes = JSON.parse(localStorage.getItem("Lista Pacientes"));
   const tabla = document.getElementById("tbody_tablaPacientes");
   tabla.innerHTML = "";
+  
   listPacientes.forEach((paciente) => {
     cargarPacienteTabla(paciente);
   });
