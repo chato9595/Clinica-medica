@@ -11,7 +11,7 @@ export const validateName = (valor, campo) => {
   
   export const validateNumber = (valor, campo) => {
     // que no este vacio
-    if (valor.trim().length < 8) {
+    if (valor.trim().length < 8 || valor.trim().length > 10) {
       campo.classList = "form-control is-invalid";
       return false;
     }
