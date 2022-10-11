@@ -8,4 +8,5 @@ export class Paciente {
         this.sexo = sexo;
         this.email = email;
     }
+    
 }

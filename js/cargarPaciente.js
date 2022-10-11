@@ -1,5 +1,6 @@
 import { rellenarFormulario } from "./editarPaciente.js";
 import { eliminarPaciente } from "./eliminarPaciente.js";
+import { scrollUp } from "./CRUDpac.js";
 
 export const cargarPacienteTabla = (paciente) => {
   const tbody = document.getElementById("tbody_tablaPacientes");
@@ -42,14 +43,31 @@ export const cargarPacienteTabla = (paciente) => {
   const tdOptions = document.createElement("td");
   const botonEditar = document.createElement("button");
   const botonEliminar = document.createElement("button");
-  
-
 
   botonEditar.innerText = "Editar";
-  botonEditar.classList.add("btn", "btn-sm", "m-1", "text-light","botonEdit");
-  botonEditar.style.backgroundColor = "#2d6a4f";
+  botonEditar.addEventListener("click", () => {
+    scrollUp();
+    
+  });
+
+    
+  botonEditar.classList.add(
+    "btn",
+    "btn-secondary",
+    "btn-sm",
+    "m-1",
+    "text-light",
+    "botonEdit"
+  );
   botonEliminar.innerText = "Eliminar";
-  botonEliminar.classList.add("btn", "btn-danger", "btn-sm", "m-1", "text-light","botonDelete");
+  botonEliminar.classList.add(
+    "btn",
+    "btn-danger",
+    "btn-sm",
+    "m-1",
+    "text-light",
+    "botonDelete"
+  );
   botonEditar.onclick = () => {
     rellenarFormulario(paciente.dni);
   };

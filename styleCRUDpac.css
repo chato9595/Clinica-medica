@@ -25,7 +25,10 @@
     transform: scale(0);
 }
 
+.invalid-feedback{
+    color: rgb(240, 31, 31);
 
+}
 
 #h1_cargarPac{
     
@@ -35,7 +38,7 @@
 }
 
 .bg-secondary {
-    background-color: #D677A2 !important;
+    background-color: #d383a7cf !important;
 }
 #buttonCargar{
     background-color: #bc226f;

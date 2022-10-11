@@ -1,11 +1,11 @@
 import { cargarPacienteTabla } from "./cargarPaciente.js";
 import { Paciente } from "./Paciente.js";
-import { validateDate, validateEmail, validateName, validateNumber } from "./validadores.js";
+import { validateDate, validateEmail, validateName, validateNumber, validateSelect } from "./validadores.js";
 
 document.getElementById("button-up").addEventListener("click", scrollUp);
 
-function scrollUp() {
-  var currentScroll = document.documentElement.scrollTop;
+export function scrollUp() {
+  let currentScroll = document.documentElement.scrollTop;
 
   if (currentScroll > 0) {
     window.scrollTo(0, currentScroll - currentScroll / 1);
@@ -14,10 +14,10 @@ function scrollUp() {
 
 ///
 
-let buttonUp = document.getElementById("button-up");
+const buttonUp = document.getElementById("button-up");
 
 window.onscroll = function () {
-  var scroll = document.documentElement.scrollTop;
+  let scroll = document.documentElement.scrollTop;
 
   if (scroll > 5) {
     buttonUp.style.transform = "scale(1)";
@@ -82,11 +82,18 @@ campoTelefono.addEventListener("change", (e) => {
   }
 });
 campoObraSocial.addEventListener("change", (e) => {
+  const esvalido = validateSelect(e.target.value, campoObraSocial);
+  if (esvalido) {
   obraSocial = e.target.value;
+  }
 });
 campoSexo.addEventListener("change", (e) => {
+  const esvalido = validateSelect(e.target.value, campoSexo);
+  if (esvalido) {
   sexo = e.target.value;
+  }
 });
+
 campoEmail.addEventListener("change", (e) => {
   const esvalido = validateEmail(e.target.value, campoEmail);
   if (esvalido) {
@@ -100,6 +107,7 @@ const cargarLocalStorage = (paciente) => {
 };
 
 formularioPaciente.addEventListener("submit", (e) => {
+  e.preventDefault();
   let isEditando;
   if (buttonCargar.innerText === "Guardar") {
     isEditando = true;
@@ -119,7 +127,10 @@ formularioPaciente.addEventListener("submit", (e) => {
     validateDate(fecha, campoFecha) &&
     validateNumber(dni, campoDni) &&
     validateNumber(telefono, campoTelefono) &&
-    validateEmail(email, campoEmail)
+    validateEmail(email, campoEmail) &&
+    validateSelect(obraSocial, campoObraSocial) &&
+    validateSelect(sexo, campoSexo)
+
   ) {
     if (!isEditando) {
       const paciente = new Paciente(
@@ -180,7 +191,7 @@ formularioPaciente.addEventListener("submit", (e) => {
   } else {
     Swal.fire({
       title: "Error!",
-      text: "Datos incorrectos",
+      text: "Verifique los campos",
       icon: "error",
       
 

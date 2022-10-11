@@ -54,3 +54,12 @@ export const validateName = (valor, campo) => {
     campo.classList = "form-control is-valid";
     return true;
     };
+
+    export const validateSelect = (valor, campo) => {
+        if (valor === "0") {
+          campo.classList = "form-control is-invalid";
+          return false;
+        }
+        campo.classList = "form-control is-valid";
+        return true;
+      }
