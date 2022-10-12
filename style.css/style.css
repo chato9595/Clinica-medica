@@ -1,14 +1,18 @@
 .RedesFooter {
-    font-size: 45px;
+    font-size: 25px;
     margin: auto;
     display: flex;
     justify-content:center;
 }
+i{
+    color:#EA5880;
+}
 .RedesFooter i{
       margin: 10px;   
-      color: rgb(250, 139, 222);
+      color: #D677A2;
 }
 .titulosFooter{
     justify-content: center;
-    color: rgb(250, 139, 222);
+    color:#EA5880;
+    font-size: 20px;
 }
