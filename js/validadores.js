@@ -15,6 +15,7 @@ export const validateName = (valor, campo) => {
       campo.classList = "form-control is-invalid";
       return false;
     }
+    
   
     const regex = /^\d+$/;
   
