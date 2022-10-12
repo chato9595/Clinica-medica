@@ -42,9 +42,13 @@
               aria-describedby="basic-addon1"
               maxlength="70"
             />
+            <div id="nameFeedback" class="invalid-feedback">
+              Ingrese un nombre válido
+            </div>
           </div>
           <div class="input-group mb-3">
             <input
+            id="telefonoContacto"
               required
               type="number"
               class="form-control"
@@ -54,24 +58,31 @@
               min="0"
               oninput="validity.valid||(value='');"
             />
+            <div id="PhoneFeedback" class="invalid-feedback">
+              Ingrese un teléfono válido
+            </div>
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">@</span>
             <input
+            id="emailContacto"
               required
-              type="text"
+              type="email"
               class="form-control"
               placeholder="Correo electrónico"
               aria-label="email"
               aria-describedby="basic-addon1"
               maxlength="70"
             />
+            <div id="emailFeedback" class="invalid-feedback">
+              Ingrese un correo válido
+            </div>
           </div>
           <div>
             <label class="my-2 text-light fs-5">Mensaje</label>
             <textarea
               required
-              id="textAreaMensaje"
+              id="mensajeContacto"
               rows="5"
               placeholder="Escriba su consulta"
               class="form-control"

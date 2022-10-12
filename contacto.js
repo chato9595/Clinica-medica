@@ -1,5 +1,10 @@
 document.getElementById("button-up").addEventListener("click", scrollUp);
 
+const campoNombre = document.getElementById("nombreContacto");
+const campoEmail = document.getElementById("emailContacto");
+const campoTelefono = document.getElementById("telefonoContacto");
+const campoMensaje = document.getElementById("mensajeContacto");
+
 function scrollUp() {
   var currentScroll = document.documentElement.scrollTop;
 
@@ -23,7 +28,6 @@ window.onscroll = function () {
 };
 
 const validateName = (valor, campo) => {
-  
   if (valor.trim().length < 2) {
     campo.classList = "form-control is-invalid";
     return false;
@@ -48,3 +52,25 @@ const validateEmail = (valor, campo) => {
   campo.classList = "form-control is-valid";
   return true;
 };
+const validateNumber = (valor, campo) => {
+  // que no este vacio
+  if (valor.trim().length < 8 || valor.trim().length > 10) {
+    campo.classList = "form-control is-invalid";
+    return false;
+  }
+  campo.classList = "form-control is-valid";
+  return true;
+};
+
+campoNombre.addEventListener("blur", (e) => {
+  validateName(e.target.value, campoNombre);
+});
+campoEmail.addEventListener("blur", (e) => {
+  validateEmail(e.target.value, campoEmail);
+});
+campoTelefono.addEventListener("blur", (e) => {
+  validateNumber(e.target.value, campoTelefono);
+});
+campoMensaje.addEventListener("blur", (e) => {
+  validateName(e.target.value, campoMensaje);
+});
