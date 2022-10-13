@@ -1,0 +1,11 @@
+#headerLogo{
+    width: 15vh;
+}
+
+.navbar{
+    background-color: #d677a213 ;
+}
+
+#cursorLogin{
+    cursor: pointer;
+}
