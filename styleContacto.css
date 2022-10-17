@@ -56,8 +56,7 @@
     }
 
     .imagen_fondo {
-        background: linear-gradient(to right, rgb(255, 213, 209)),
-            url(https://www.lesteraldridge.com/app/uploads/2020/10/hospital-reception.jpg);
+      
         height: 100%;
 
 
