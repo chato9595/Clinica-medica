@@ -32,6 +32,11 @@ const validateName = (valor, campo) => {
     campo.classList = "form-control is-invalid";
     return false;
   }
+  const regex = /^(?![\s.]+$)[a-zA-Z\s.]*$/;
+  if (!regex.test(valor)) {
+    campo.classList = "form-control is-invalid";
+    return false;
+  }
 
   campo.classList = "form-control is-valid";
   return true;
@@ -54,7 +59,7 @@ const validateEmail = (valor, campo) => {
 };
 const validateNumber = (valor, campo) => {
   // que no este vacio
-  if (valor.trim().length < 8 || valor.trim().length > 10) {
+  if (valor.trim().length < 8 || valor.trim().length > 11) {
     campo.classList = "form-control is-invalid";
     return false;
   }
