@@ -3,7 +3,7 @@ const contraseñaLogin = document.getElementById('contraseñaLogin')
 
 
 let usuarioLog = 'admin@gmail.com'
-let contraseña= 'rolling'
+let contraseña= 1234
 
 
 /*
@@ -27,9 +27,10 @@ export const validateContraseña =(valor, campo) =>{
 }*/
 
 function validacion(){
-    if(usuarioLogin.value === usuarioLog){
+    if(usuarioLogin(e.target.value)  !== usuarioLog){
         alert ('ERROR. Usuario incorrecto.')
         return false
+        console.log('usuario incorrecto')
     }
     const regex = /^\d+$/;
     if (!regex.test(valor)) {
@@ -40,13 +41,14 @@ function validacion(){
         return false
     }
     
-    if(contraseñaLogin.value<1){
+    if(contraseñaLogin(e.target.value)<1){
         return false
     }
 
-    if(contraseñaLogin.value === contraseña){
+    if(contraseñaLogin(e.target.value) !== contraseña){
         alert ('ERROR. Contraseña incorrecta.')
         return false
     }
     return true
+    console.log('correcto')
 }

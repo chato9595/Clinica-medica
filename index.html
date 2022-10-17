@@ -25,7 +25,7 @@
     <header></header>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand " href="#">
+        <a class="navbar-brand" href="#">
           <img
             id="headerLogo"
             src="./img/woman_medical_assistence.jpg"
@@ -52,11 +52,11 @@
             </li>
             <li class="nav-item">
               <a
-              id="cursorLogin"
+                id="cursorLogin"
                 class="nav-link"
                 data-bs-toggle="modal"
                 data-bs-target="#modalUsuario"
-                >Login</a
+                >Admin</a
               >
             </li>
           </ul>
@@ -72,61 +72,65 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
-         
-
-           <div class="modal-header">
-             <h1 class="modal-title fs-5" id="modalUsuarioLabel">
-               Ingresar Usuario
-              </h1>
-              <button
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalUsuarioLabel">
+              Ingresar Usuario
+            </h1>
+            <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <form id="formUsuario" onsubmit="return validacion()">
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formUsuario" onsubmit="return validacion()">
               <div class="mb-3">
                 <label for="usuarioLogin" class="col-form-label"
-                >Usuario*</label
+                  >Usuario*</label
                 >
                 <input
-                type="email"
-                placeholder="Usuario@gmail.com"
-                class="form-control"
-                id="usuarioLogin"
-                maxlength="30"
-                required
+                  type="email"
+                  placeholder="Usuario@gmail.com"
+                  class="form-control"
+                  id="usuarioLogin"
+                  maxlength="30"
+                  required
                 />
               </div>
               <div class="mb-3">
                 <label for="contraseñaLogin" class="col-form-label"
-                >Contraseña*</label
+                  >Contraseña*</label
                 >
                 <input
-                id="contraseñaLogin"
-                type="password"
-                placeholder="Contraseña"
-                class="form-control"
-                maxlength="30"
-                required
+                  id="contraseñaLogin"
+                  type="password"
+                  placeholder="Contraseña"
+                  class="form-control"
+                  maxlength="30"
+                  required
                 />
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button
+                  id="buttonIngresar"
+                  type="submit"
+                  class="btn btn-primary"
+                >
+                  Ingresar
+                </button>
               </div>
             </form>
           </div>
-          <div class="modal-footer">
-            <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            >
-            Cancelar
-          </button>
-          <button id="buttonIngresar" type="submit" class="btn btn-primary">Ingresar</button>
         </div>
-      
-      </div>
       </div>
     </div>
 
