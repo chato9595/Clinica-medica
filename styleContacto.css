@@ -6,11 +6,11 @@
 
 #section_contacto {
     background-color: #D677A2;
-    padding: 50px 0;
 
 
-    
-    
+
+
+
 }
 
 #btn_sendmsg {
@@ -32,18 +32,20 @@
 
 .imagen_fondo {
     background: linear-gradient(to right, transparent, rgb(255, 213, 209)),
-    url(https://www.lesteraldridge.com/app/uploads/2020/10/hospital-reception.jpg);
+        url(https://www.lesteraldridge.com/app/uploads/2020/10/hospital-reception.jpg);
     background-size: cover;
     padding: 1%;
     background-attachment: fixed;
-    height: 75vh;
-  
+    height: 100%;
+
+
 }
-#Check1:checked{
+
+#Check1:checked {
     background-color: #bc226f;
     color: rgb(255, 255, 255);
     padding: 0.5rem;
-    
+
 }
 
 /* MEDIA QUERY */
@@ -52,21 +54,27 @@
         width: 100%;
 
     }
+
     .imagen_fondo {
-        background: linear-gradient(to right,  rgb(255, 213, 209)),
-        url(https://www.lesteraldridge.com/app/uploads/2020/10/hospital-reception.jpg);
-        
-        padding-top: 7%;
-       
-        height: 70vh;
+        background: linear-gradient(to right, rgb(255, 213, 209)),
+            url(https://www.lesteraldridge.com/app/uploads/2020/10/hospital-reception.jpg);
+        height: 100%;
+
+
+    }
+
+
+
+
 
 
 }
-}
 
 
 
-#button-up{
+
+
+#button-up {
     width: 60px;
     height: 60px;
     background: #bc226f;
@@ -85,9 +93,9 @@
     transform: scale(0);
 }
 
-#button-up:hover{
+#button-up:hover {
     transform: scale(1.1);
-    border-color: rgba(0,0,0,0.1);
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 #title_contact {
@@ -97,6 +105,7 @@
     text-align: center;
     padding: 1rem;
 }
-#title_contacto{
-   color:  #D677A2;
+
+#title_contacto {
+    color: #D677A2;
 }
