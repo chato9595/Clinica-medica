@@ -1,30 +1,37 @@
-import { validateContraseña, validateUsuario } from "./validacionLogin";
+const usuario = document.getElementById("usuarioLogin");
+const contraseña = document.getElementById("contrasenaLogin");
+const formulario = document.getElementById("formUsuario");
+
+const user = "admin";
+const pass = 1234;
 
 
-//const formToLogin = document.getElementById("formUsuario");
-//const modalLogin = document.getElementById("modalUsuario");
-
-
-
-
-/*
-class Usuario{
-    constructor(usuarioLogin,contraseñaLogin){
-        this.usuarioLogin= usuarioLogin
-        this.contraseñaLogin= contraseñaLogin
-    }
+function validateUser() {
+  if (usuario.value == user) {
+    return true;
+  }
+  return false;
 }
 
-const usuarioLogin = document.getElementById('usuarioLogin')
-const contraseñaLogin = document.getElementById('contraseñaLogin')
+function validatePass() {
+  if (contraseña.value == pass) {
+    return true;
+  }
+  return false;
+}
 
-usuarioLogin.addEventListener('blur',(e)=>{
-    if(validateUsuario(e.target.value, usuarioLogin)){
-      usuarioLogin = e.target.value
-    }
-})
-contraseñaLogin.addEventListener('blur',(e)=>{
-    if(validateContraseña(e.target.value, contraseñaLogin)){
-        contraseñaLogin = e.target.value
-    }
-})*/
+function validateForm() {
+  if (validateUser() && validatePass()) {
+    return true;
+  }
+  return false;
+}
+
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (validateForm()) {
+    window.open("admin.html");
+  } else {
+    alert("Usuario o contraseña incorrectos");
+  }
+});
