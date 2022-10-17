@@ -44,6 +44,7 @@
               class="form-control"
               id="nombrePaciente"
               placeholder="Nombre completo"
+              maxlength="70"
             />
             <div id="nombrePaciente__feedback" class="invalid-feedback">
               Ingrese un nombre válido
@@ -79,12 +80,12 @@
           </div>
 
           <div class="mb-3">
-            <label for="telefonoPaciente" class="form-label">Telefono</label>
+            <label for="telefonoPaciente" class="form-label">Teléfono</label>
             <input
               type="text"
               class="form-control"
               id="telefonoPaciente"
-              placeholder="381 123 4567"
+              placeholder="Teléfono (celulares sin 0 ni 15)"
             />
             <div id="telefonoPaciente__feedback" class="invalid-feedback">
               Ingrese un telefono válido
@@ -128,7 +129,9 @@
               class="form-control"
               id="emailPaciente"
               placeholder="usuario@gmail.com"
+              maxlength="70"
             />
+            
             <div id="emailPaciente__feedback" class="invalid-feedback">
               Ingrese un email válido
             </div>

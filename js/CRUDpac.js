@@ -1,6 +1,6 @@
 import { cargarPacienteTabla } from "./cargarPaciente.js";
 import { Paciente } from "./Paciente.js";
-import { validateDate, validateEmail, validateName, validateNumber, validateSelect } from "./validadores.js";
+import { validateDate, validateDNI, validateEmail, validateName, validateNumber, validateSelect } from "./validadores.js";
 
 document.getElementById("button-up").addEventListener("click", scrollUp);
 
@@ -64,7 +64,7 @@ campoNombre.addEventListener("change", (e) => {
   }
 });
 campoDni.addEventListener("change", (e) => {
-  const esvalido = validateNumber(e.target.value, campoDni);
+  const esvalido = validateDNI(e.target.value, campoDni);
   if (esvalido) {
     dni = e.target.value;
   }
@@ -125,7 +125,7 @@ formularioPaciente.addEventListener("submit", (e) => {
   if (
     validateName(nombre, campoNombre) &&
     validateDate(fecha, campoFecha) &&
-    validateNumber(dni, campoDni) &&
+    validateDNI(dni, campoDni) &&
     validateNumber(telefono, campoTelefono) &&
     validateEmail(email, campoEmail) &&
     validateSelect(obraSocial, campoObraSocial) &&

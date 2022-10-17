@@ -74,7 +74,7 @@
    
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 8px 12px;
     font-size: 16px;
     
 }
@@ -82,7 +82,7 @@
 .botonDelete{
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 8px 12px;
     font-size: 16px;
 }
  @media only screen and (max-width: 992px) {
@@ -132,6 +132,24 @@
 	td:nth-of-type(6):before { content: "Sexo"; }
 	td:nth-of-type(7):before { content: "Email"; }
 	
-	
+	#button-up{
+        width: 45px;
+        height: 45px;
+        background: #bc226f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 50%;
+        font-size: 20px;
+        position: fixed;
+        bottom: 5px;
+        right: 45vw;
+        cursor: pointer;
+        border: 4px solid transparent;
+        transition: all 300ms ease;
+        transform: scale(0);
+    }
+    
 }
     
