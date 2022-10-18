@@ -57,6 +57,9 @@ export const cargarPacienteTabla = (paciente) => {
   tdOptions.classList.add("tdOptions", "align-middle" );
   const botonEditar = document.createElement("button");
   const botonEliminar = document.createElement("button");
+  const iconoEditar = document.createElement("i");
+
+
 
   botonEditar.innerText = "Editar";
   botonEditar.addEventListener("click", () => {

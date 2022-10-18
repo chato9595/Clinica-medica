@@ -67,8 +67,14 @@
 #tabla_paciente{
     margin-top: 2rem;
     margin-bottom: 2rem;
+    
 
     
+}
+thead{
+    background-color: #D677A2;
+    color: white;
+    font-weight: 500;
 }
 .botonEdit{
    
