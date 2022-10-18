@@ -23,6 +23,7 @@ export const cargarPacienteTabla = (paciente) => {
     }
     return edad;
   };
+ 
 
   tdNombre.innerText = paciente.nombre;
   tdFecha.innerText = calcularEdad(paciente.fecha);
@@ -32,6 +33,9 @@ export const cargarPacienteTabla = (paciente) => {
   tdSexo.innerText = paciente.sexo;
   tdEmail.innerText = paciente.email;
 
+
+
+
   tr.appendChild(tdNombre);
   tr.appendChild(tdFecha);
   tr.appendChild(tdDni);
@@ -40,7 +44,17 @@ export const cargarPacienteTabla = (paciente) => {
   tr.appendChild(tdSexo);
   tr.appendChild(tdEmail);
 
+  tdNombre.classList.add("pt-3");
+  tdFecha.classList.add("pt-3");
+  tdDni.classList.add("pt-3");
+  tdTelefono.classList.add("pt-3");
+  tdObraSocial.classList.add("pt-3");
+  tdSexo.classList.add("pt-3");
+  tdEmail.classList.add("pt-3");
+
+
   const tdOptions = document.createElement("td");
+  tdOptions.classList.add("tdOptions", "align-middle" );
   const botonEditar = document.createElement("button");
   const botonEliminar = document.createElement("button");
 
@@ -57,7 +71,8 @@ export const cargarPacienteTabla = (paciente) => {
     "btn-sm",
     "m-1",
     "text-light",
-    "botonEdit"
+    "botonEdit",
+    "px-3"
   );
   botonEliminar.innerText = "Eliminar";
   botonEliminar.classList.add(
@@ -78,5 +93,6 @@ export const cargarPacienteTabla = (paciente) => {
   tdOptions.appendChild(botonEditar);
   tdOptions.appendChild(botonEliminar);
   tr.appendChild(tdOptions);
+  
   tbody.appendChild(tr);
 };

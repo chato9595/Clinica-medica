@@ -108,6 +108,11 @@
 		position: relative;
 		 
 	}
+    .tdOptions{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
     
 
     td:before { 
@@ -144,7 +149,7 @@
         font-size: 20px;
         position: fixed;
         bottom: 5px;
-        right: 45vw;
+        right: 45%;
         cursor: pointer;
         border: 4px solid transparent;
         transition: all 300ms ease;
