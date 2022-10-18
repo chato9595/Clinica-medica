@@ -1,10 +1,90 @@
-const usuarioLogin = document.getElementById('usuarioLogin')
-const contraseñaLogin = document.getElementById('contraseñaLogin')
+let loginButton = document.getElementById("buttonIngresar");
+
+let usuarioLogin = document.getElementById("email");
+let contraseñaLogin = document.getElementById("password");
+
+let usuario = {
+    clave: 1234, 
+    nombre: 'admin@gmail.com'
+}
+
+loginButton.addEventListener("blur", (e) => {
+  e.preventDefault();
+  if (usuarioLogin === usuario.nombre && contraseñaLogin === usuario.clave) {
+    window.location.href = "./admin.html";
+    console.log("contrase;a correcta");
+  } else {
+    Swal.fire({
+      title: "Error",
+      text: "Acceso denegado",
+      icon: "warning",
+    });
+  }
+});
+
+/*
+  if (usuarioLogin != "" && contraseñaLogin != "") {
+    let logged = false;
+    let response = JSON.parse(localStorage.getItem("users"));
+    let userSesion = response.map((item) => {
+      if (
+        item.email === usuarioLogin.value &&
+        item.clave === contraseñaLogin.value
+      ) {
+        let update = {
+          ...item,
+          sesion: true,
+        };
+        logged = true;
+        return update;
+      } else {
+        return item;
+      }
+    });
+
+    if (logged) {
+      localStorage.setItem("users", JSON.stringify(userSesion));
+      window.location.href = "./admin.html";
+    } else {
+      Swal.fire({
+        title: "Error",
+        text: "Acceso denegado",
+        icon: "warning",
+      });
+    }
+  } else {
+    Swal.fire({
+      title: "Error",
+      text: "Acceso denegado",
+      icon: "warning",
+    });
+  }
+});
+*/
+/*
+
+let contraseña= contraseñaLogin.getPassword()
+
+contraseña = new String('contraseña')
+
+if(usuarioLogin.getText().equals('admin@gmail.com') && contraseña.equals('1234')){
+    this.dispose()
+
+    Swal.fire({
+        title: "Exito",
+        text: "Se ingreso exitosamente",
+        icon: "success",
+      });
+} else {
+    Swal.fire({
+        title: "Error",
+        text: "Acceso denegado",
+        icon: "warning",
+      });
+}
 
 
-let usuarioLog = 'admin@gmail.com'
-let contraseña= 1234
-
+*/
 
 /*
 export const validateUsuario = (valor, campo) =>{
@@ -26,29 +106,29 @@ export const validateContraseña =(valor, campo) =>{
     
 }*/
 
+/*
 function validacion(){
-    if(usuarioLogin(e.target.value)  !== usuarioLog){
-        alert ('ERROR. Usuario incorrecto.')
+    if(usuarioLogin(e.target.value) != usuario && contraseñaLogin(e.target.value) != clave){
+        Swal.fire({
+            title: "Error",
+            text: "Acceso denegado",
+            icon: "warning",
+          });
+          console.log('usuario incorrecto')
         return false
-        console.log('usuario incorrecto')
-    }
-    const regex = /^\d+$/;
-    if (!regex.test(valor)) {
-      return false;
-
-    }
-    if(usuarioLogin.value<1){
-        return false
+        
+    } else{
+        Swal.fire({
+            title: "Exito!",
+            text: "Ingresaste exitosamente",
+            icon: "success",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Si, eliminar contacto",
+            cancelButtonText: "Cancelar",
+          })
     }
     
-    if(contraseñaLogin(e.target.value)<1){
-        return false
-    }
-
-    if(contraseñaLogin(e.target.value) !== contraseña){
-        alert ('ERROR. Contraseña incorrecta.')
-        return false
-    }
-    return true
-    console.log('correcto')
 }
+*/
