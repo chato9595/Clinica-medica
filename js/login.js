@@ -30,6 +30,7 @@ function validateForm() {
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   if (validateForm()) {
+    location.reload();
     window.open("admin.html");
   } else {
     Swal.fire({
