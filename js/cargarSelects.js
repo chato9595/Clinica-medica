@@ -43,3 +43,42 @@ export const medicosSelect = () => {
   opcion.innerText = medico.nombre + " " + medico.apellido;
   campoMedico.appendChild(opcion);
 };
+
+
+export const horariosSelect = () => {
+  const campoHorario = document.getElementById("horario");
+  const campoFecha = document.getElementById("fechaTurno");
+  const campoMedico = document.getElementById("medico");
+  
+  let horarios = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+  let ocupados = [];
+  let disponibles = [];
+
+  let fecha = campoFecha.value;
+  let medico = campoMedico.value;
+
+  let turnosLS = JSON.parse(localStorage.getItem("Lista turnos"));
+  let turnosOcupados = [];
+  if (turnosLS != null) {
+    turnosOcupados = turnosLS.filter((turno) => {
+      return turno.fecha === fecha && turno.medico === medico;
+    }); 
+  }
+  turnosOcupados.forEach((turno) => {
+    ocupados.push(turno.horario);
+  });
+  horarios.forEach((horario) => {
+    if (!ocupados.includes(horario)) {
+      disponibles.push(horario);
+    }
+  });
+  
+  disponibles.forEach((horario) => {
+    const option = document.createElement("option");
+    option.value = horario;
+    option.innerText = horario + ":00";
+    campoHorario.appendChild(option);
+  }
+  );
+};
+

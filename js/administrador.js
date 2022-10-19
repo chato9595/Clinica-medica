@@ -1,7 +1,11 @@
-import { medicosSelect, pacientesSelect } from "./cargarSelects.js";
+import {
+  horariosSelect,
+  medicosSelect,
+  pacientesSelect,
+} from "./cargarSelects.js";
 import { Medico } from "./Medico.js";
 import { Turno } from "./Turno.js";
-import { validadorSelect } from "./validadores.js";
+import { validadorFecha, validadorSelect } from "./validadores.js";
 
 const formulario = document.getElementById("formularioTurno");
 const campoPaciente = document.getElementById("paciente");
@@ -57,7 +61,7 @@ const medicos = [
 ];
 localStorage.setItem("Lista Medicos", JSON.stringify(medicos));
 
-let turnosLS = JSON.parse(localStorage.getItem("turnos"));
+let turnosLS = JSON.parse(localStorage.getItem("Lista turnos"));
 let turnos = [];
 
 if (turnosLS != null) {
@@ -77,8 +81,7 @@ campoPaciente.addEventListener("blur", (e) => {
   }
 });
 
-
-campoEspecialidad.addEventListener("change", (e) => {
+campoEspecialidad.addEventListener("blur", (e) => {
   validadorSelect(e.target.value, campoEspecialidad);
   if (validadorSelect(e.target.value, campoEspecialidad)) {
     especialidad = e.target.value;
@@ -86,27 +89,104 @@ campoEspecialidad.addEventListener("change", (e) => {
   }
 });
 
-campoMedico.addEventListener("change", (e) => {
+campoMedico.addEventListener("blur", (e) => {
   validadorSelect(e.target.value, campoMedico);
   if (validadorSelect(e.target.value, campoMedico)) {
     medico = e.target.value;
   }
 });
 
-campoFecha.addEventListener("change", (e) => {
+campoFecha.addEventListener("blur", (e) => {
   validadorSelect(e.target.value, campoFecha);
   if (validadorSelect(e.target.value, campoFecha)) {
     fecha = e.target.value;
     horariosSelect();
   }
 });
-campoHorario.addEventListener("change", (e) => {
+campoHorario.addEventListener("blur", (e) => {
   validadorSelect(e.target.value, campoHorario);
   if (validadorSelect(e.target.value, campoHorario)) {
     horario = e.target.value;
   }
 });
 
-campoDescripcion.addEventListener("change", (e) => {
+campoDescripcion.addEventListener("blur", (e) => {
   descripcion = e.target.value;
 });
+
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let Editing;
+  if (botonCargarTurno.innerText === "Editar") {
+    Editing = true;
+  } else {
+    Editing = false;
+  }
+  paciente = campoPaciente.value;
+  especialidad = campoEspecialidad.value;
+  medico = campoMedico.value;
+  fecha = campoFecha.value;
+  horario = campoHorario.value;
+  descripcion = campoDescripcion.value;
+
+  if (
+    validadorSelect(paciente, campoPaciente) &&
+    validadorSelect(especialidad, campoEspecialidad) &&
+    validadorSelect(medico, campoMedico) &&
+    validadorFecha(fecha, campoFecha) &&
+    validadorSelect(horario, campoHorario)
+  ) {
+    
+    if (!Editing){
+      const turno = new Turno(paciente, especialidad, medico, fecha, horario, descripcion);
+      addTurnoLS(turno);
+      addTurnoTabla(turno);
+      Swal.fire({
+        title: "Turno cargado con éxito",
+        icon: "success",
+      }
+      );
+    } else {
+      const idTurno =Number(sessionStorage.getItem("idTurno"));
+      sessionStorage.removeItem("idTurno");
+      const indexTurno = turnos.findIndex((turno) => {
+        return turno.id === idTurno;
+      });
+      turnos[indexTurno].paciente = paciente;
+      turnos[indexTurno].especialidad = especialidad;
+      turnos[indexTurno].medico = medico;
+      turnos[indexTurno].fecha = fecha;
+      turnos[indexTurno].horario = horario;
+      turnos[indexTurno].descripcion = descripcion;
+
+      localStorage.setItem("Lista turnos", JSON.stringify(turnos));
+      Swal.fire({
+        title: "Turno editado con éxito",
+        icon: "success",
+    }
+      );
+    botonCargarTurno.innerText = "Cargar";
+    }
+    updateTabla();
+    formulario.reset();
+  } else {
+    Swal.fire({
+      title: "Error al cargar turno",
+      text: "Complete todos los campos",
+      icon: "error",
+    });
+
+  }
+});
+
+export const updateTabla = () => {
+  const turnosLS = JSON.parse(localStorage.getItem("Lista turnos"));
+  const tbody = document.getElementById("turnos_tbody");
+  tbody.innerHTML = "";
+  turnosLS.forEach((turno) => {
+    cargarTurnoTabla(turno);
+  });
+};
+
+
+
