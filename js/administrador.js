@@ -3,9 +3,33 @@ import {
   medicosSelect,
   pacientesSelect,
 } from "./cargarSelects.js";
+import { cargarTurnoTabla } from "./cargarTurno.js";
 import { Medico } from "./Medico.js";
 import { Turno } from "./Turno.js";
 import { validadorFecha, validadorSelect } from "./validadores.js";
+
+document.getElementById("button-up").addEventListener("click", scrollUp);
+export function scrollUp() {
+  let currentScroll = document.documentElement.scrollTop;
+
+  if (currentScroll > 0) {
+    window.scrollTo(0, currentScroll - currentScroll / 1);
+  }
+}
+
+///
+
+const buttonUp = document.getElementById("button-up");
+
+window.onscroll = function () {
+  let scroll = document.documentElement.scrollTop;
+
+  if (scroll > 5) {
+    buttonUp.style.transform = "scale(1)";
+  } else if (scroll < 5) {
+    buttonUp.style.transform = "scale(0)";
+  }
+};
 
 const formulario = document.getElementById("formularioTurno");
 const campoPaciente = document.getElementById("paciente");
@@ -100,7 +124,9 @@ campoFecha.addEventListener("blur", (e) => {
   validadorSelect(e.target.value, campoFecha);
   if (validadorSelect(e.target.value, campoFecha)) {
     fecha = e.target.value;
+    campoHorario.innerHTML= `<option value="0">Seleccione un horario</option>`
     horariosSelect();
+    
   }
 });
 campoHorario.addEventListener("blur", (e) => {
@@ -113,6 +139,11 @@ campoHorario.addEventListener("blur", (e) => {
 campoDescripcion.addEventListener("blur", (e) => {
   descripcion = e.target.value;
 });
+
+const addTurnoLS = (turno) => {
+  turnos.unshift(turno);
+  localStorage.setItem("Lista turnos", JSON.stringify(turnos));
+};
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -136,18 +167,23 @@ formulario.addEventListener("submit", (e) => {
     validadorFecha(fecha, campoFecha) &&
     validadorSelect(horario, campoHorario)
   ) {
-    
-    if (!Editing){
-      const turno = new Turno(paciente, especialidad, medico, fecha, horario, descripcion);
+    if (!Editing) {
+      const turno = new Turno(
+        paciente,
+        especialidad,
+        medico,
+        fecha,
+        horario,
+        descripcion
+      );
       addTurnoLS(turno);
-      addTurnoTabla(turno);
+      cargarTurnoTabla(turno);
       Swal.fire({
         title: "Turno cargado con éxito",
         icon: "success",
-      }
-      );
+      });
     } else {
-      const idTurno =Number(sessionStorage.getItem("idTurno"));
+      const idTurno = Number(sessionStorage.getItem("idTurno"));
       sessionStorage.removeItem("idTurno");
       const indexTurno = turnos.findIndex((turno) => {
         return turno.id === idTurno;
@@ -163,19 +199,23 @@ formulario.addEventListener("submit", (e) => {
       Swal.fire({
         title: "Turno editado con éxito",
         icon: "success",
-    }
-      );
-    botonCargarTurno.innerText = "Cargar";
+      });
+      botonCargarTurno.innerText = "Cargar";
     }
     updateTabla();
     formulario.reset();
+    campoPaciente.classList.remove("is-valid");
+    campoEspecialidad.classList.remove("is-valid");
+    campoMedico.classList.remove("is-valid");
+    campoFecha.classList.remove("is-valid");
+    campoHorario.classList.remove("is-valid");
+
   } else {
     Swal.fire({
       title: "Error al cargar turno",
       text: "Complete todos los campos",
       icon: "error",
     });
-
   }
 });
 
@@ -187,6 +227,4 @@ export const updateTabla = () => {
     cargarTurnoTabla(turno);
   });
 };
-
-
 
