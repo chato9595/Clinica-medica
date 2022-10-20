@@ -26,18 +26,19 @@
     <link rel="stylesheet" href="./css/styleCRUDturn.css" />
   </head>
   <body>
-    <main class=" mainAdmin">
+    <main class=" mainAdmin container">
+      
+      <div class="text-center">
+        <hr />
+        <h1 id="h1_cargarPac">CARGAR TURNO</h1>
+        <hr />
+      </div>
       <section
-        class="bg-white formulario container text-dark pb-3  "
+        class="formulario container bg-secondary container text-light rounded col-lg-6 col-sm-12 pb-3"
       >
-        <div class="text-center">
-          <hr />
-          <h1 id="h1_cargarPac">CARGAR TURNO</h1>
-          <hr />
-        </div>
         <form id="formularioTurno">
           <div class="mb-3">
-            <label class="mb-2 text-dark">Paciente</label>
+            <label class="mt-3 mb-2 ">Paciente</label>
             <select class="form-select" id="paciente">
               <option value="0">Seleccione un paciente</option>
             </select>
@@ -46,7 +47,7 @@
             </div>
           </div>
           <div class="mb-3">
-            <label class="mb-2 text-dark">Especialidad</label>
+            <label class="my-2 ">Especialidad</label>
             <select class="form-select" id="especialidad">
               <option value="0">Seleccione una especialidad</option>
               <option value="Ginecología">Ginecología</option>
@@ -60,7 +61,7 @@
             </div>
           </div>
           <div class="mb-3">
-            <label class="mb-2 text-dark">Médico</label>
+            <label class="my-2 ">Médico</label>
             <select class="form-select" id="medico">
               <option value="0">Seleccione un médico</option>
             </select>
@@ -77,7 +78,7 @@
           </div>
 
           <div class="mb-3">
-            <label class="mb-2 text-dark">Horario</label>
+            <label class="my-2 ">Horario</label>
             <select class="form-select" id="horario">
               <option value="0">Seleccione un horario</option>
             </select>
@@ -90,15 +91,19 @@
             <textarea class="form-control" id="descripcion" rows="3"></textarea>
           </div>
           <div class="text-end">
-            <button id="cargarTurno" class="btn btn-primary" type="submit">
+            <button id="cargarTurno" class="btn btn-secondary" type="submit">
               Cargar
             </button>
           </div>
         </form>
       </section>
-      
+      <section class="text-center container">
+        <hr class="mt-5"/>
+        <h2 class="mb-2" id="h1_cargarPac">Lista de Turnos</h2>
+        <hr class="mb-3"/>
+      </section>
       <section class="table-responsive container">
-        <hr />
+        
         <table id="tabla_paciente" class="table align-middle">
           <thead>
             <tr id="tableROW">

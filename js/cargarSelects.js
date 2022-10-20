@@ -57,25 +57,25 @@ export const horariosSelect = () => {
   let medico = campoMedico.value;
 
   let turnosLS = JSON.parse(localStorage.getItem("Lista turnos"));
-  console.log(turnosLS);
+  
   let turnosOcupados = [];
   if (turnosLS != null) {
     turnosOcupados = turnosLS.filter((turno) => {
       return turno.fecha === fecha && turno.medico === medico;
     });
   }
-  console.log(turnosOcupados);
+  
   turnosOcupados.forEach((turno) => {
     ocupados.push(Number(turno.hora));
   });
-  console.log(ocupados);
+  
   
   horarios.forEach((horario) => {
     if (!ocupados.includes(horario)) {
       disponibles.push(horario);
     }
   });
-  console.log(disponibles);
+ 
 
   disponibles.forEach((horario) => {
     const option = document.createElement("option");

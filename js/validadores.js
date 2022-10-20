@@ -4,17 +4,17 @@ export const validadorSelect = (valor, campo) => {
     return false;
   } else {
     campo.classList.remove("is-invalid");
-  campo.classList.add("is-valid");
+    campo.classList.add("is-valid");
 
-   
     return true;
   }
 };
 
 export const validadorFecha = (valor, campo) => {
-  if (valor === "") {
+  const regex = /^\d{4}-\d{1,2}-\d{1,2}$/.test(valor);
+  if (!regex) {
     campo.classList.add("is-invalid");
-    
+
     return false;
   } else {
     campo.classList.remove("is-invalid");

@@ -1,3 +1,4 @@
+import { scrollUp } from "./administrador.js";
 import { rellenarFormulario } from "./editarTurno.js";
 import { eliminarTurno } from "./eliminarTurno.js";
 
@@ -33,6 +34,7 @@ export const cargarTurnoTabla = (turno) => {
   tr.appendChild(tdDescripcion);
 
   const tdAcciones = document.createElement("td");
+  tdAcciones.classList.add("tdOptions", "align-middle" );
   const botonEditar = document.createElement("button");
   botonEditar.classList.add(
     "btn",
@@ -53,6 +55,11 @@ export const cargarTurnoTabla = (turno) => {
     "text-light",
     "botonDelete"
   );
+
+  botonEditar.addEventListener("click", () => {
+    scrollUp();
+    
+  });
   botonEliminar.innerText = "Eliminar";
 
   botonEditar.onclick = () => {
