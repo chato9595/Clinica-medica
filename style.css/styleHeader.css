@@ -64,10 +64,15 @@ background: linear-gradient(180deg, rgba(250,243,247,0.981127485173757) 0%, rgba
         padding: 5vh 0;
     }
     nav .navbar-nav li a {
-        color:#bc226fa2;
+        color:#474646a2;
         font-weight: 300;
     }
 
     
 
 }
+
+.navbar-toggler-icon{
+    border-color: #E51269;
+}
+
