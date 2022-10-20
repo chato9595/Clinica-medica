@@ -57,44 +57,44 @@ if (listPacientes != null) {
   });
 }
 
-campoNombre.addEventListener("change", (e) => {
+campoNombre.addEventListener("blur", (e) => {
   const esvalido = validateName(e.target.value, campoNombre);
   if (esvalido) {
     nombre = e.target.value;
   }
 });
-campoDni.addEventListener("change", (e) => {
+campoDni.addEventListener("blur", (e) => {
   const esvalido = validateDNI(e.target.value, campoDni);
   if (esvalido) {
     dni = e.target.value;
   }
 });
-campoFecha.addEventListener("change", (e) => {
+campoFecha.addEventListener("blur", (e) => {
   const esvalido = validateDate(e.target.value, campoFecha);
   if (esvalido) {
     fecha = e.target.value;
   }
 });
-campoTelefono.addEventListener("change", (e) => {
+campoTelefono.addEventListener("blur", (e) => {
   const esvalido = validateNumber(e.target.value, campoTelefono);
   if (esvalido) {
     telefono = e.target.value;
   }
 });
-campoObraSocial.addEventListener("change", (e) => {
+campoObraSocial.addEventListener("blur", (e) => {
   const esvalido = validateSelect(e.target.value, campoObraSocial);
   if (esvalido) {
   obraSocial = e.target.value;
   }
 });
-campoSexo.addEventListener("change", (e) => {
+campoSexo.addEventListener("blur", (e) => {
   const esvalido = validateSelect(e.target.value, campoSexo);
   if (esvalido) {
   sexo = e.target.value;
   }
 });
 
-campoEmail.addEventListener("change", (e) => {
+campoEmail.addEventListener("blur", (e) => {
   const esvalido = validateEmail(e.target.value, campoEmail);
   if (esvalido) {
     email = e.target.value;
