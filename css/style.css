@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
 .mainPrincipal{
-    background-color:#EA5880;
+   
     font-family: 'Roboto', "arial";
 }
 
@@ -15,6 +15,10 @@
     top: 55%; 
     left: 50px;
     width: 50%;
+}
+#textoUnicoBanner{
+  font-size: 20px;
+  
 }
 
 .section-bienvenida:hover {
@@ -32,6 +36,13 @@ background: linear-gradient(100deg, rgba(214,119,162,1) 27%, rgba(229,18,105,1) 
   background: linear-gradient(100deg, rgba(214,119,162,1) 27%, rgba(229,18,105,1) 53%, rgba(188,34,111,1) 78%, rgba(188,34,111,1) 93%);
 }
 
+.botonCardModal{
+  background: rgb(214,119,162);
+  background: linear-gradient(100deg, rgba(214,119,162,1) 27%, rgba(229,18,105,1) 53%, rgba(188,34,111,1) 78%, rgba(188,34,111,1) 93%);  
+}
+
+
+
 @media screen and (min-width: 990px) {
 .v-line{
   border-left:thick solid  rgba(214,119,162,1);
@@ -41,18 +52,42 @@ background: linear-gradient(100deg, rgba(214,119,162,1) 27%, rgba(229,18,105,1) 
   margin-top: 3px;
   margin-left: -10px;
 }
+
 }
- @media screen and (max-width:670px) {
+/*@media screen and (min-width:700px){
+  .img-responsive-banner{
+    position: relative;
+    display: inline-block;
+}
+.card-responsive-banner{
+  position: absolute;         
+  top: 30%; 
+  left: 50px;
+  width: 50%;
+}
+#botonUnicoBienvenida{
+  position: absolute;
+  left: 50px;
+  top: 115px;
+ }
+}*/
+ @media screen and (max-width:960px) {
 
   .img-responsive-banner{
     position: relative;
     display: inline-block;
 }
+.card-responsive-banner{
+  position: absolute;         
+  top: 20%; 
+  left: 50px;
+  width: 50%;
+}
 #botonUnicoBienvenida{
   position: absolute;
-  left: 280px;
+  left: 290px;
   width: 50%;
-  top: 40px;
+  top: 115px;
  }
 
  }
@@ -64,13 +99,17 @@ background: linear-gradient(100deg, rgba(214,119,162,1) 27%, rgba(229,18,105,1) 
 }
 #botonUnicoBienvenida{
   position: absolute;
-  left: 10px;
+  left: 230px;
   width: 50%;
-  top: 75px;
+  top: 90px;
  }
  .card-responsive-banner{
-  top:10px
+  top:20px
  }
+ #textoUnicoBanner{
+  font-size: 17px;
+ }
+
  }
  
 
