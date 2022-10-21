@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+.letra_fondo{
+  color: #e8e8e8;
+  
+  
+}
+
+
+  
+.layered-image {
+  background: linear-gradient(to right, transparent, rgb(214,119,162)),
+    url("https://www.interitehealthcare.com.au/wp-content/uploads/2020/12/woman-visiting-female-doctor-scaled.jpg");
+    
+    height: 80vh;
+    background-size: cover;
+    }
+
+    
+
+  
+
+  
+.title_noticias{
+  color:rgb(214,119,162);
+}
+
+
+
+.v-line{
+  border-left:thick solid  rgba(214,119,162,1);
+  height: 20%;
+  position: absolute;
+  border-width: 0.5px;
+  margin-top: 3px;
+  margin-left: -10px;
+}
+
+
+
+
+
+.section-bienvenida:hover {
+  background: #bc226f;
+  color: #ffffff;
+}
+
+.title_news{
+  color: #bc226f;
+}
+
+
+
+@media screen and (max-width: 768px) {
+.v-line{
+  display: none;
+}
+ 
+.layered-image {
+  background: linear-gradient(to right, transparent, rgb(214,119,162)),
+    url("https://www.interitehealthcare.com.au/wp-content/uploads/2020/12/woman-visiting-female-doctor-scaled.jpg");
+    
+    height: 40vh;
+    background-size: cover;
+    }
+
+    
+.letra_fondo{
+  color: #e8e8e8;
+  font-weight: 400;
+  padding-left: 75vw;
+  padding-top: 10vh;
+  
+  
+}
+}
+
+.card-title{
+height: 10vh;
+  
+
+}
+.card-text{
+  height: 20vh;
+}
