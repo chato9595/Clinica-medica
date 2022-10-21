@@ -31,7 +31,7 @@
 
 .v-line{
   border-left:thick solid  rgba(214,119,162,1);
-  height: 20%;
+  height: 25%;
   position: absolute;
   border-width: 0.5px;
   margin-top: 3px;
@@ -51,11 +51,17 @@
   color: #bc226f;
 }
 
-
+.hr_news{
+ display: none;
+}
 
 @media screen and (max-width: 768px) {
 .v-line{
   display: none;
+}
+.section-bienvenida{
+  background: #bc226f;
+  color: #ffffff;
 }
  
 .layered-image {
@@ -64,6 +70,10 @@
     
     height: 40vh;
     background-size: cover;
+    }
+
+    .hr_news{
+  display: block;
     }
 
     
@@ -83,5 +93,20 @@ height: 8vh;
 
 }
 .card-text{
-  height: 15vh;
+  height: 10vh;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .card-text{
+    height: 12vh;
+  }
+  .layered-image {
+    background: linear-gradient(to right, transparent, rgb(214,119,162)),
+      url("https://www.interitehealthcare.com.au/wp-content/uploads/2020/12/woman-visiting-female-doctor-scaled.jpg");
+      
+      height: 40vh;
+      background-size: cover;
+      }
+  
 }
