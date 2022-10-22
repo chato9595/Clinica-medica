@@ -19,8 +19,9 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/style.css/styleFooter.css" />
-    <link rel="stylesheet" href="./styleContacto.css" />
+    <link rel="stylesheet" href="/css/styleFooter.css" />
+    <link rel="stylesheet" href="./css/styleContacto.css" />
+    <link rel="stylesheet" href="./css/style.css">
     <script
       src="https://kit.fontawesome.com/88922d1405.js"
       crossorigin="anonymous"
@@ -28,129 +29,19 @@
   </head>
   
   <body>
-    <section class="">
-      <div class="imagen_fondo d-flex align-items-end justify-content-end">
-        <section class="p-3 rounded" id="section_contacto">
-          <h2 class="text-light fs-1">Consultas</h2>
-          <form id="formMensaje">
-            <div class="input-group mb-3">
-              <input
-                id="nombreContacto"
-                required
-                type="text"
-                class="form-control"
-                placeholder="Ingrese su nombre"
-                aria-label="name"
-                aria-describedby="basic-addon1"
-                maxlength="45"
-              />
-              <div id="nameFeedback" class="invalid-feedback">
-                Ingrese un nombre válido
-              </div>
-            </div>
-            <div class="input-group mb-3">
-              <input
-                id="telefonoContacto"
-                required
-                type="number"
-                class="form-control"
-                placeholder="Teléfono (celular sin 0 ni 15)"
-                aria-label="telephone"
-                aria-describedby="basic-addon1"
-                min="0"
-                oninput="validity.valid||(value='');"
-              />
-              <div id="PhoneFeedback" class="invalid-feedback">
-                Ingrese un teléfono válido
-              </div>
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">@</span>
-              <input
-                id="emailContacto"
-                required
-                type="email"
-                class="form-control"
-                placeholder="Correo electrónico"
-                aria-label="email"
-                aria-describedby="basic-addon1"
-                maxlength="70"
-              />
-              <div id="emailFeedback" class="invalid-feedback">
-                Ingrese un correo válido
-              </div>
-            </div>
-            <div>
-              <label class="my-2 text-light fs-5">Mensaje</label>
-              <textarea
-                required
-                id="mensajeContacto"
-                rows="5"
-                placeholder="Escriba su consulta"
-                class="form-control"
-                minlength="10"
-                maxlength="200"
-              ></textarea>
-            </div>
-            <div class="my-2 form-check">
-              <input type="checkbox" class="form-check-input" id="Check1" />
-              <label class="form-check-label text-light" for="Check1"
-                >He leído y acepto la política de privacidad y protección de
-                datos</label
-              >
-            </div>
-            <div class="text-end">
-              <button
-                type="submit"
-                class="btn mt-2 btn-secondary"
-                id="btn_sendmsg"
-              >
-                Enviar mensaje
-              </button>
-            </div>
-          </form>
-        </section>
-      </div>
-      <div class="container mb-5">
-        <section class="row col">
-          <h2 id="title_contacto" class="text-center my-5 display-4">
-            Contacto
-          </h2>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2972.1447050876386!2d-65.20812463105585!3d-26.836516461177272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x7946062ac490db30!2sGral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1665274406139!5m2!1ses-419!2sar"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            class="d-block rounded my-3 col-lg-6"
-          ></iframe>
-          <article class="col-lg-6 d-flex flex-column justify-content-center">
-            <h3 id="title_contact" class="text-center fs-4">Dirección</h3>
-            <p class="text-center">
-              General Paz 576, San Miguel de Tucumán, Tucumán
-            </p>
-            <h3 id="title_contact" class="text-center fs-4">Teléfono</h3>
-            <p class="text-center">381 987 6543</p>
-            <h3 id="title_contact" class="text-center fs-4">Email</h3>
-            <p class="text-center">contacto@womansmedicalassistence.com</p>
-          </article>
-        </section>
-      </div>
-    </section>
+    
 
     <div id="button-up">
       <span class="fas fa-chevron-up"></span>
     </div>
 
-    <footer class="py-2 bg-dark text-secondary">
+    <footer class="pb-1 bg-dark text-secondary">
       <section class="container-fluid">
         <div class="row">
           <article class="mt-5 col-sm-12 col-md-5 text-center">
             <a href="./index.html"
               ><img
-                src="/imagenes/wma PNG v5.png"
+                src="/assets/wma_PNG_v5.png"
                 alt="Logo Women's Medical Assistance"
                 class="w-75"
             /></a>
@@ -175,35 +66,35 @@
           </article>
 
           <article
-            class="col-sm-12 col-md-4 mt-4 text-center d-flex flex-column justify-content-center"
+            class="col-sm-12 col-md-4 mt-4 text-center d-flex flex-column justify-content-center px-2"
           >
-            <h2 class="titulosFooter mt-4 mb-2">CONTACTO</h2>
+            <h2 class="titulosFooter pt-3 mb-2 fs-4">CONTACTO</h2>
 
             <i class="fa-solid fa-location-dot fa-1x mb-1 mt-2"></i>
-            <p class="mb-1">General Paz, 576</p>
-            <p class="mb-1">San Miguel de Tucumán</p>
+            <p class="mb-2 txt_footer">General Paz, 576</p>
+            <p class="mb-2 txt_footer">San Miguel de Tucumán</p>
 
-            <i class="fa-solid fa-phone fa-1x"></i>
+            <i class="fa-solid fa-phone fa-1x txt_footer"></i>
 
-            <p class="mb-1">(+54) 381 987 6543</p>
+            <p class="mb-2 txt_footer"> 381 987 6543</p>
 
             <i class="fa-solid fa-envelope fa-1x"></i>
 
-            <a href="views/error404.html" class="nav-link mb-4"
-              >contacto@womansmedicalassistence.com</a
+            <a href="views/error404.html" class="nav-link mb-4 txt_footer"
+              >wmassistance@contacto.com</a
             >
           </article>
 
           <article
             class="col-sm-12 col-md-3 d-flex flex-column text-center justify-content-center"
           >
-            <h2 class="mb-3 titulosFooter text-center">SECCIONES</h2>
-            <a href="views/entrenamientos.html" class="nav-link mt-2 mb-1"
+            <h2 class="mb-3 titulosFooter text-center fs-4">SECCIONES</h2>
+            <a href="views/entrenamientos.html" class="nav-link mt-4 mb-1 txt_footer"
               >Informes</a
             >
-            <a href="views/alimentacion.html" class="nav-link my-1">Horarios</a>
-            <a href="views/contacto.html" class="nav-link my-1">Novedades</a>
-            <a href="views/acercade.html" class="nav-link my-1"
+            <a href="views/alimentacion.html" class="nav-link my-1 txt_footer">Horarios</a>
+            <a href="views/contacto.html" class="nav-link my-1 txt_footer">Novedades</a>
+            <a href="views/acercade.html" class="nav-link my-1 txt_footer"
               >Especialidades</a
             >
           </article>
@@ -222,6 +113,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script src="./contacto.js"></script>
+    <script src="./js/contacto.js"></script>
   </body>
 </html>
