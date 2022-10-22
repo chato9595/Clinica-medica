@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const validadorSelect = (valor, campo) => {
   if (valor == "0") {
     campo.classList.add("is-invalid");
@@ -22,7 +21,7 @@ export const validadorFecha = (valor, campo) => {
     campo.classList.add("is-valid");
     return true;
   }
-=======
+}
 export const validateName = (valor, campo) => {
   // que no este vacio
   if (valor.trim().length < 2) {
@@ -109,5 +108,4 @@ export const validateSelect = (valor, campo) => {
   }
   campo.classList = "form-control is-valid";
   return true;
->>>>>>> main
 };
