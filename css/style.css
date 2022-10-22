@@ -26,7 +26,13 @@
 .title_noticias {
   color: rgb(214, 119, 162);
 }
-
+.section_descripcion{
+  
+ 
+  margin: auto ;
+  border-radius: 10px;
+ 
+}
 
 
 .v-line {
@@ -40,7 +46,10 @@
 
 
 
+#title_WMA{
+ color:  #bc226f;
 
+}
 
 .section-bienvenida:hover {
   background: #bc226f;
