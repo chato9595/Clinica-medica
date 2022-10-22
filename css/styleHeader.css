@@ -6,12 +6,25 @@
 }
 
 #headerLogo {
-    width: 28vh;
+    width: 32vh;
+}
+
+.links_header{
+    font-size: 1.3rem;
+}
+.btn-rose{  
+    background-color:#EA5880 !important;
+    color: #fff !important;
+    
+   
+}
+.login_user{
+    
+    color: #EA5880;
 }
 
 .navbar {
-    font-size: 2.5vh;
-    /* height: 12vh; */
+    
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     background: rgb(250, 243, 247);
     background: linear-gradient(90deg, rgba(250, 243, 247, 0.981127485173757) 5%, rgba(237, 192, 217, 0.9923319669664741) 16%, rgba(233, 178, 206, 1) 21%, rgba(231, 136, 179, 1) 55%, rgba(230, 110, 159, 1) 100%);
