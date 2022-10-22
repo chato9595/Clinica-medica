@@ -1,3 +1,8 @@
+.txt_footer{
+   
+    text-align: center;
+    font-size: 1.2rem !important;
+}
 .RedesFooter {
     font-size: 25px;
     margin: auto;
@@ -21,3 +26,4 @@ i{
     
     text-align: center;
 }
+
