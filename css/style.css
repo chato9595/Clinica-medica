@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+.letra_fondo {
+  color: #e8e8e8;
+
+
+}
+
+
+
+.layered-image {
+  background: linear-gradient(to right, transparent, rgb(214, 119, 162)),
+    url("https://www.interitehealthcare.com.au/wp-content/uploads/2020/12/woman-visiting-female-doctor-scaled.jpg");
+
+  height: 80vh;
+  background-size: cover;
+}
+
+
+
+
+
+
+.title_noticias {
+  color: rgb(214, 119, 162);
+}
+.section_descripcion{
+  
+ 
+  margin: auto ;
+  border-radius: 10px;
+ 
+}
+
+
+.v-line {
+  border-left: thick solid rgba(214, 119, 162, 1);
+  height: 25%;
+  position: absolute;
+  border-width: 0.5px;
+  margin-top: 3px;
+  margin-left: -10px;
+}
+
+
+
+#title_WMA{
+ color:  #bc226f;
+
+}
+
+.section-bienvenida:hover {
+  background: #bc226f;
+  color: #ffffff;
+}
+
+.title_news {
+  color: #bc226f;
+}
+
+.hr_news {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .v-line {
+    display: none;
+  }
+
+  .section-bienvenida {
+    background: #bc226f;
+    color: #ffffff;
+  }
+
+  .layered-image {
+    background: linear-gradient(to right, transparent, rgb(214, 119, 162)),
+      url("https://www.interitehealthcare.com.au/wp-content/uploads/2020/12/woman-visiting-female-doctor-scaled.jpg");
+
+    height: 40vh;
+    background-size: cover;
+  }
+
+  .hr_news {
+    display: block;
+  }
+
+
+  .letra_fondo {
+    color: #e8e8e8;
+    font-weight: 400;
+    padding-left: 75vw;
+    padding-top: 10vh;
+
+
+  }
+}
+
+.card-title {
+  height: 8vh;
+
+
+}
+
+.card-text {
+  height: 10vh;
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .card-text {
+    height: 12vh;
+  }
+
+  .layered-image {
+    background: linear-gradient(to right, transparent, rgb(214, 119, 162)),
+      url("https://www.interitehealthcare.com.au/wp-content/uploads/2020/12/woman-visiting-female-doctor-scaled.jpg");
+
+    height: 40vh;
+    background-size: cover;
+  }
+
+}
+
+.img_carousel {
+  height: 55vh;
+
+  object-fit: cover;
+  object-position: 0 18%;
+
+}
+
+.carousel-caption {
+
+  width: 100%;
+  background-color: rgba(214, 119, 162, 0.871);
+  left: 0%;
+  font-size: 1.5rem;
+}
+
+
+
+@media only screen and (min-width: 353px) and (max-width: 992px) {
+  .img_carousel {
+    height: 40vh;
+
+    object-fit: cover;
+    object-position: 65% 1%;
+
+
+  }
+
+  .carousel-caption {
+    height: 14vh;
+    font-size: 1.2rem;
+
+  }
+
+ 
+}
+
+.title_experiencias {
+  color: #E51269;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+}
+
+#title_contacto {
+  color: #D677A2;
+}
