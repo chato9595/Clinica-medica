@@ -1,6 +1,7 @@
 import { scrollUp } from "./administrador.js";
 import { rellenarFormulario } from "./editarTurno.js";
 import { eliminarTurno } from "./eliminarTurno.js";
+import { formatoFecha } from "./fecha.js";
 
 export const cargarTurnoTabla = (turno) => {
   const tbody = document.getElementById("turnos_tbody");
@@ -26,7 +27,7 @@ export const cargarTurnoTabla = (turno) => {
   tr.appendChild(tdMedico);
 
   const tdFecha = document.createElement("td");
-  tdFecha.innerText = turno.fecha;
+  tdFecha.innerText = formatoFecha(turno.fecha);
   tr.appendChild(tdFecha);
 
   const tdHora = document.createElement("td");

@@ -3,7 +3,7 @@
 
 
 .letra_fondo {
-  color: #e8e8e8;
+  color: rgb(241, 239, 239);
 
 
 }
@@ -18,36 +18,51 @@
   background-size: cover;
 }
 
+.img1 {
 
+  height: 30vh;
+  width: 30vh;
 
+  border: none;
+
+  object-fit: contain;
+
+}
+
+.txt_informacion {
+  color: #bc226f;
+  text-decoration: none;
+}
 
 
 
 .title_noticias {
   color: rgb(214, 119, 162);
 }
-.section_descripcion{
-  
- 
-  margin: auto ;
+
+.section_descripcion {
+
+
+  margin: auto;
   border-radius: 10px;
- 
+
 }
 
 
 .v-line {
   border-left: thick solid rgba(214, 119, 162, 1);
   height: 25%;
-  position: absolute;
+  /* position: absolute; */
   border-width: 0.5px;
   margin-top: 3px;
   margin-left: -10px;
+  
 }
 
 
 
-#title_WMA{
- color:  #bc226f;
+#title_WMA {
+  color: #bc226f;
 
 }
 
@@ -64,6 +79,12 @@
   display: none;
 }
 
+@media only screen and (max-width: 576px) {
+  .hr_news {
+    display: block;
+  }
+  
+}
 @media screen and (max-width: 768px) {
   .v-line {
     display: none;
@@ -82,18 +103,19 @@
     background-size: cover;
   }
 
-  .hr_news {
-    display: block;
-  }
+  
 
 
   .letra_fondo {
-    color: #e8e8e8;
+    color: rgb(241, 239, 239);
     font-weight: 400;
     padding-left: 75vw;
     padding-top: 10vh;
 
 
+  }
+  .cards{
+    border: none !important;
   }
 }
 
@@ -113,6 +135,9 @@
   .card-text {
     height: 12vh;
   }
+
+
+
 
   .layered-image {
     background: linear-gradient(to right, transparent, rgb(214, 119, 162)),
@@ -152,13 +177,24 @@
 
   }
 
+  .img1 {
+
+    height: 25vh;
+    width: 25vh;
+  
+    border: none;
+  
+    object-fit: contain;
+  
+  }
+
   .carousel-caption {
     height: 14vh;
     font-size: 1.2rem;
 
   }
 
- 
+
 }
 
 .title_experiencias {

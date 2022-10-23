@@ -4,6 +4,29 @@ const campoNombre = document.getElementById("nombreContacto");
 const campoEmail = document.getElementById("emailContacto");
 const campoTelefono = document.getElementById("telefonoContacto");
 const campoMensaje = document.getElementById("mensajeContacto");
+const formularioContacto = document.getElementById("formMensaje");
+
+formularioContacto.addEventListener("submit", (e) => {
+  
+  if (
+    validateName(campoNombre.value, campoNombre) &&
+    validateEmail(campoEmail.value, campoEmail) &&
+    validateNumber(campoTelefono.value, campoTelefono) &&
+    validateName(campoMensaje.value, campoMensaje)
+  ) {
+    e.preventDefault();  
+    Swal.fire({
+      title: "Mensaje enviado",
+      text: "Gracias por contactarte con nosotros",
+      icon: "success",
+      confirmButtonText: "Aceptar",
+    });
+    formularioContacto.reset();
+    
+  }
+
+  
+});
 
 function scrollUp() {
   var currentScroll = document.documentElement.scrollTop;
