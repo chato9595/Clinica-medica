@@ -7,6 +7,14 @@ const campoSexo = document.getElementById("sexoPaciente");
 const campoEmail = document.getElementById("emailPaciente");
 const buttonCargar = document.getElementById("buttonCargar");
 export const rellenarFormulario = (dni) => {
+  campoNombre.classList="form-control";
+  campoFecha.classList="form-control";
+  campoDni.classList="form-control";
+  campoTelefono.classList="form-control";
+  campoObraSocial.classList="form-select";
+  campoSexo.classList="form-select";
+  campoEmail.classList="form-control";
+  
   const pacientes = JSON.parse(localStorage.getItem("Lista Pacientes"));
   const pacienteEditar = pacientes.find((paciente) => paciente.dni === dni);
   campoNombre.value = pacienteEditar.nombre;

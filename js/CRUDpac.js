@@ -31,6 +31,7 @@ const formularioPaciente = document.getElementById("formPaciente");
 
 const campoNombre = document.getElementById("nombrePaciente");
 const campoFecha = document.getElementById("FnacPaciente");
+campoFecha.setAttribute("max", new Date().toISOString().split("T")[0]);
 const campoDni = document.getElementById("DniPaciente");
 const campoTelefono = document.getElementById("telefonoPaciente");
 const campoObraSocial = document.getElementById("OsPaciente");

@@ -37,6 +37,7 @@ const campoPaciente = document.getElementById("paciente");
 const campoEspecialidad = document.getElementById("especialidad");
 const campoMedico = document.getElementById("medico");
 const campoFecha = document.getElementById("fechaTurno");
+campoFecha.setAttribute("min", new Date().toISOString().split("T")[0]);
 const campoHorario = document.getElementById("horario");
 const campoDescripcion = document.getElementById("descripcion");
 
