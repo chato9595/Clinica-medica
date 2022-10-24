@@ -13,6 +13,10 @@
       content="medical clinic focused on the diagnosis and treatment of women's diseases"
     />
     <title>Woman's Medical Assistance</title>
+    <link rel="stylesheet" href="./css/styleFooter.css" />
+    <link rel="stylesheet" href="./css/styleHeader.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styleContacto.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,15 +25,135 @@
     />
     <link rel="icon" href="./assets/favicon.png">
     
-    <link rel="stylesheet" href="./css/styleFooter.css" />
-    <link rel="stylesheet" href="./css/styleContacto.css" />
-    <link rel="stylesheet" href="./css/style.css">
+    
     <script
       src="https://kit.fontawesome.com/88922d1405.js"
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              id="headerLogo"
+              src="./assets/wma_PNG_v5.png"
+              alt="Logo"
+              class="d-inline-block align-text-top me-3"
+            />
+          </a>
+          <button
+            class="navbar-toggler me-2 "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item me-2 links_header">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Inicio</a
+                >
+              </li>
+             
+              <li class="nav-item mx-2 links_header">
+                <a class="nav-link" aria-current="page" href="./acercade.html"
+                  >Acerca de</a
+                >
+              </li>
+              <li class="nav-item mx-2 links_header">
+                <a
+                  id="cursorLogin"
+                  class="nav-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalUsuario"
+                  >Admin</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="modal fade"
+        id="modalUsuario"
+        tabindex="-1"
+        aria-labelledby="modalUsuarioLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4 login_user" id="modalUsuarioLabel">
+                Ingresar Usuario
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="formUsuario">
+                <div class="mb-3">
+                  <label for="usuarioLogin" class="col-form-label"
+                    >Usuario*</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Usuario"
+                    class="form-control "
+                    id="usuarioLogin"
+                    maxlength="30"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="contrasenaLogin" class="col-form-label"
+                    >Contraseña*</label
+                  >
+                  <input
+                    id="contrasenaLogin"
+                    type="password"
+                    placeholder="Contraseña"
+                    class="form-control"
+                    maxlength="30"
+                    required
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    id="buttonIngresar"
+                    type="submit"
+                    class="btn btn-rose"
+                  >
+                    Ingresar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main class="mainPrincipal">
       <div>
         <section
@@ -403,6 +527,9 @@
       </div>
     </section>
 
+    
+
+  
     <footer class="pb-1 bg-dark text-secondary">
       <section class="container-fluid">
         <div class="row">
@@ -492,5 +619,8 @@
     ></script>
     <script src="./js/contacto.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   
+    <script src="./js/validacionLogin.js"></script>
   </body>
 </html>
