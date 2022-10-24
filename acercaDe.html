@@ -19,14 +19,140 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./style.css/styleAcercaDe.css" />
+    <link rel="stylesheet" href="./css/styleHeader.css">
+    <link rel="stylesheet" href="./css/styleAcercaDe.css" />
+    <link rel="stylesheet" href="./css/styleFooter.css">
+    
     <script
       src="https://kit.fontawesome.com/10942c11e8.js"
       crossorigin="anonymous"
     ></script>
     <title>Acerca de Nosotros</title>
   </head>
+  
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              id="headerLogo"
+              src="./assets/wma_PNG_v5.png"
+              alt="Logo"
+              class="d-inline-block align-text-top me-3"
+            />
+          </a>
+          <button
+            class="navbar-toggler me-2 "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item me-2 links_header">
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="./index.html"
+                  >Inicio</a
+                >
+              </li>
+             
+              <li class="nav-item mx-2 links_header">
+                <a class="nav-link active" aria-current="page" href="./acercade.html"
+                  >Acerca de</a
+                >
+              </li>
+              <li class="nav-item mx-2 links_header">
+                <a
+                  id="cursorLogin"
+                  class="nav-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalUsuario"
+                  >Admin</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="modal fade"
+        id="modalUsuario"
+        tabindex="-1"
+        aria-labelledby="modalUsuarioLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-4 login_user" id="modalUsuarioLabel">
+                Ingresar Usuario
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="formUsuario">
+                <div class="mb-3">
+                  <label for="usuarioLogin" class="col-form-label"
+                    >Usuario*</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Usuario"
+                    class="form-control "
+                    id="usuarioLogin"
+                    maxlength="30"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="contrasenaLogin" class="col-form-label"
+                    >Contraseña*</label
+                  >
+                  <input
+                    id="contrasenaLogin"
+                    type="password"
+                    placeholder="Contraseña"
+                    class="form-control"
+                    maxlength="30"
+                    required
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    id="buttonIngresar"
+                    type="submit"
+                    class="btn btn-rose"
+                  >
+                    Ingresar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <main class="container">
       <section class="mt-2 py-3 text-dark row">
         <section class="col-lg-5">
@@ -102,7 +228,7 @@
                   alt="foto_felix"
                   class="img1 shadow-sm w-100 my-3"
                 />
-                <h6 class="text-center fs-5 titulos">FELIX GERARDO</h6>
+                <h6 class="text-center fs-5 titulos">FELIX DIAZ</h6>
               </article>
               <article class="col-lg-2 col-sm-5 col-md-4 col-5">
                 <img
@@ -128,7 +254,6 @@
                 />
                 <h6 class="text-center fs-5 titulos">CANDELA MERCADO</h6>
               </article>
-             
             </div>
           </div>
         </section>
