@@ -1,6 +1,18 @@
 import { updateTabla } from "./administrador.js";
-
+const formulario = document.getElementById("formularioTurno");
+const campoPaciente = document.getElementById("paciente");
+const campoEspecialidad = document.getElementById("especialidad");
+const campoMedico = document.getElementById("medico");
+const campoFecha = document.getElementById("fechaTurno");
+const campoHorario = document.getElementById("horario");
+const campoDescripcion = document.getElementById("descripcion");
 export const eliminarTurno = (id) => {
+  campoPaciente.classList = "form-select";
+  campoEspecialidad.classList = "form-select";
+  campoMedico.classList = "form-select";
+  campoFecha.classList = "form-control";
+  campoHorario.classList = "form-select";
+  campoDescripcion.classList = "form-control";
   const turnos = JSON.parse(localStorage.getItem("Lista turnos"));
   const indexBorrar = turnos.findIndex((turno) => {
     return turno.id === id;

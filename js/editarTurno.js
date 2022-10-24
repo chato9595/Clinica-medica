@@ -11,6 +11,13 @@ const campoDescripcion = document.getElementById("descripcion");
 const botonCargarTurno = document.getElementById("cargarTurno");
 
 export const rellenarFormulario = (id) => {
+  campoPaciente.classList = "form-select";
+  campoEspecialidad.classList = "form-select";
+  campoMedico.classList = "form-select";
+  campoFecha.classList = "form-control";
+  campoHorario.classList = "form-select";
+  campoDescripcion.classList = "form-control";
+
   const turnos = JSON.parse(localStorage.getItem("Lista turnos"));
   const turnoEditar = turnos.find((turno) => {
     return turno.id === id;

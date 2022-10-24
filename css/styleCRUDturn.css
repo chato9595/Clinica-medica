@@ -22,6 +22,7 @@
     border: 4px solid transparent;
     transition: all 300ms ease;
     transform: scale(0);
+    z-index: 2;
 }
 
 @media only screen and (max-width: 992px) {
@@ -86,24 +87,27 @@
     td:nth-of-type(2):before {
         content: "Paciente";
     }
-
     td:nth-of-type(3):before {
-        content: "Especialidad";
+        content: "DNI";
     }
 
     td:nth-of-type(4):before {
-        content: "Médico";
+        content: "Especialidad";
     }
 
     td:nth-of-type(5):before {
-        content: "Fecha";
+        content: "Médico";
     }
 
     td:nth-of-type(6):before {
-        content: "Horario";
+        content: "Fecha";
     }
 
     td:nth-of-type(7):before {
+        content: "Horario";
+    }
+
+    td:nth-of-type(8):before {
         content: "Descripción";
     }
 
@@ -124,9 +128,11 @@
         border: 4px solid transparent;
         transition: all 300ms ease;
         transform: scale(0);
+        z-index: 2;
     }
 
 }
+
 
 .invalid-feedback {
     color: rgb(240, 31, 31);
@@ -145,7 +151,7 @@
 }
 
 #cargarTurno {
-    background-color: #bc226f;
+    
     color: white;
     border: none;
     border-radius: 5px;

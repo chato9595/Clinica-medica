@@ -1,5 +1,7 @@
+import { scrollUp } from "./administrador.js";
 import { rellenarFormulario } from "./editarTurno.js";
 import { eliminarTurno } from "./eliminarTurno.js";
+import { formatoFecha } from "./fecha.js";
 
 export const cargarTurnoTabla = (turno) => {
   const tbody = document.getElementById("turnos_tbody");
@@ -9,8 +11,12 @@ export const cargarTurnoTabla = (turno) => {
   tr.appendChild(tdId);
 
   const tdPaciente = document.createElement("td");
-  tdPaciente.innerText = turno.paciente;
+  tdPaciente.innerText = turno.paciente.split(" (")[0];
   tr.appendChild(tdPaciente);
+
+  const tdDni= document.createElement("td");
+  tdDni.innerText = turno.paciente.split(" (")[1].split(")")[0];
+  tr.appendChild(tdDni);
 
   const tdEspecialidad = document.createElement("td");
   tdEspecialidad.innerText = turno.especialidad;
@@ -21,11 +27,11 @@ export const cargarTurnoTabla = (turno) => {
   tr.appendChild(tdMedico);
 
   const tdFecha = document.createElement("td");
-  tdFecha.innerText = turno.fecha;
+  tdFecha.innerText = formatoFecha(turno.fecha);
   tr.appendChild(tdFecha);
 
   const tdHora = document.createElement("td");
-  tdHora.innerText = turno.hora;
+  tdHora.innerText = turno.hora + ":00";
   tr.appendChild(tdHora);
 
   const tdDescripcion = document.createElement("td");
@@ -33,6 +39,7 @@ export const cargarTurnoTabla = (turno) => {
   tr.appendChild(tdDescripcion);
 
   const tdAcciones = document.createElement("td");
+  tdAcciones.classList.add("tdOptions", "align-middle" );
   const botonEditar = document.createElement("button");
   botonEditar.classList.add(
     "btn",
@@ -53,6 +60,11 @@ export const cargarTurnoTabla = (turno) => {
     "text-light",
     "botonDelete"
   );
+
+  botonEditar.addEventListener("click", () => {
+    scrollUp();
+    
+  });
   botonEliminar.innerText = "Eliminar";
 
   botonEditar.onclick = () => {

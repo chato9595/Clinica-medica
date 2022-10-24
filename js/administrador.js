@@ -31,17 +31,19 @@ window.onscroll = function () {
   }
 };
 
+
 const formulario = document.getElementById("formularioTurno");
 const campoPaciente = document.getElementById("paciente");
 const campoEspecialidad = document.getElementById("especialidad");
 const campoMedico = document.getElementById("medico");
 const campoFecha = document.getElementById("fechaTurno");
+campoFecha.setAttribute("min", new Date().toISOString().split("T")[0]);
 const campoHorario = document.getElementById("horario");
 const campoDescripcion = document.getElementById("descripcion");
 
 const botonCargarTurno = document.getElementById("cargarTurno");
 
-console.log(campoPaciente);
+
 
 let paciente = "";
 let especialidad = "";
@@ -98,7 +100,7 @@ if (turnosLS != null) {
 pacientesSelect();
 
 campoPaciente.addEventListener("blur", (e) => {
-  console.log(campoPaciente.value, campoPaciente);
+ 
   validadorSelect(campoPaciente.value, campoPaciente);
   if (validadorSelect(campoPaciente.value, campoPaciente)) {
     paciente = campoPaciente.value;
@@ -121,8 +123,10 @@ campoMedico.addEventListener("blur", (e) => {
 });
 
 campoFecha.addEventListener("blur", (e) => {
-  validadorSelect(e.target.value, campoFecha);
-  if (validadorSelect(e.target.value, campoFecha)) {
+  console.log(e.target.value);
+  validadorFecha(e.target.value, campoFecha);
+  console.log(validadorFecha(e.target.value, campoFecha));
+  if (validadorFecha(e.target.value, campoFecha)) {
     fecha = e.target.value;
     campoHorario.innerHTML= `<option value="0">Seleccione un horario</option>`
     horariosSelect();
@@ -159,6 +163,8 @@ formulario.addEventListener("submit", (e) => {
   fecha = campoFecha.value;
   horario = campoHorario.value;
   descripcion = campoDescripcion.value;
+
+ 
 
   if (
     validadorSelect(paciente, campoPaciente) &&

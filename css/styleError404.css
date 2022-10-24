@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+main{
+    font-family: 'Roboto', "arial";
+}
+.botonError{
+    background-color: #D677A2;  
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+   
+    
+}
+.botonError:hover{
+    background-color: #bc226f;
+    color: #ffffff;
+    
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+#imagenError{
+    width: 50vw;
+    padding-top: 5vh;    
+    object-fit:cover;
+}
+.txt_404{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color:#bc226f; 
+    
+
+}
+@media screen and (max-width: 576px){
+    #imagenError{
+        width: 100vw;
+        padding-top: 20vh;
+    }
+    .txt_404{
+        font-size: 1.5rem;
+    }
+    .botonError{
+        font-size: 1.2rem;
+    }
+}
