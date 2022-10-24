@@ -4,12 +4,19 @@ main{
     font-family: 'Roboto', "arial";
 }
 .botonError{
-    background-color: #bc226f;
+    background-color: #D677A2;  
     color: #ffffff;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
    
     
+}
+.botonError:hover{
+    background-color: #bc226f;
+    color: #ffffff;
+    
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
 }
 
 #imagenError{
@@ -20,7 +27,7 @@ main{
 .txt_404{
     font-size: 1.7rem;
     font-weight: 700;
-    color:#D677A2;  
+    color:#bc226f; 
     
 
 }
