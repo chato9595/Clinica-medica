@@ -1,0 +1,29 @@
+.txt_footer{
+   
+    text-align: center;
+    font-size: 1.2rem !important;
+}
+.RedesFooter {
+    font-size: 25px;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+}
+i{
+    color:#EA5880;
+}
+.RedesFooter i{
+      margin: 10px;   
+      color: #D677A2;
+}
+.titulosFooter{
+    justify-content: center;
+    color:#D677A2;
+    font-size: 20px;
+}
+#id_copyright{
+    color: #e1dfe0be;
+    
+    text-align: center;
+}
+

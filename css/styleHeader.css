@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+#headerLogo {
+    width: 32vh;
+}
+
+.links_header{
+    font-size: 1.3rem;
+}
+.btn-rose{  
+    background-color:#EA5880 !important;
+    color: #fff !important;
+    
+   
+}
+.login_user{
+    
+    color: #EA5880;
+}
+
+.navbar {
+    
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    background: rgb(250, 243, 247);
+    background: linear-gradient(90deg, rgba(250, 243, 247, 0.981127485173757) 5%, rgba(237, 192, 217, 0.9923319669664741) 16%, rgba(233, 178, 206, 1) 21%, rgba(231, 136, 179, 1) 55%, rgba(230, 110, 159, 1) 100%);
+}
+
+nav .navbar-nav li a {
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+nav .navbar-nav li a:hover {
+    color: #E51269;
+
+}
+
+article a:hover {
+    color: #E51269;
+    text-decoration: none;
+}
+
+
+
+#cursorLogin {
+    cursor: pointer;
+
+}
+
+.navbar-nav {
+    float: none;
+    margin: 0 24vw;
+    display: block;
+    text-align: center;
+
+}
+.active{
+    color:#E51269 !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        
+        background: rgb(250,243,247);
+background: linear-gradient(180deg, rgba(250,243,247,0.981127485173757) 0%, rgba(255,200,224,1) 75%, rgb(253, 152, 198) 150%);
+
+    }
+
+    #headerLogo {
+        width: 30vh;
+        padding: 5vh 0;
+    }
+    nav .navbar-nav li a {
+        color:#474646a2;
+        font-weight: 300;
+    }
+
+    
+
+}
+
+.navbar-toggler-icon{
+    border-color: #E51269;
+}
+
