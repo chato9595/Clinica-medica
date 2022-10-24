@@ -64,7 +64,7 @@ article a:hover {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .navbar {
         
         background: rgb(250,243,247);
@@ -74,7 +74,7 @@ background: linear-gradient(180deg, rgba(250,243,247,0.981127485173757) 0%, rgba
 
     #headerLogo {
         width: 30vh;
-        padding: 5vh 0;
+        padding: 1.5vh 0;
     }
     nav .navbar-nav li a {
         color:#474646a2;
