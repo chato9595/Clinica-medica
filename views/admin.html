@@ -88,7 +88,7 @@
     </header>
 
     <main class="container">
-      <section class="d-flex flex-column align-items-center row">
+      <section class="d-flex justify-content-center row">
         <article class="mt-5 mb-3 col-lg-6 col-md-9 col-sm-12 px-4">
           <form id="filtroMedico" class="">
             <div>
@@ -110,6 +110,33 @@
               </button>
               <button
                 id="quitarFiltro"
+                class="btn btn-secondary mt-1"
+                type="click"
+              >
+                Quitar filtro
+              </button>
+            </div>
+          </form>
+        </article>
+        <article class="mt-5 mb-3 col-lg-6 col-md-9 col-sm-12 px-4">
+          <form id="filtroPaciente" >
+            <div>
+              <label for="selectorPaciente">Buscar por paciente</label>
+              <input id="selectorPaciente" class="form-control my-2 " type="text" placeholder="Ingrese DNI">
+              <div id="selectorPaciente_feedback" class="invalid-feedback ">
+                Ingrese un DNI válido.
+              </div>
+            </div>
+            <div>
+              <button
+                id="botonBuscarPaciente"
+                class="btn btn-rose mt-1"
+                type="submit"
+              >
+                Buscar
+              </button>
+              <button
+                id="quitarFiltroPaciente"
                 class="btn btn-secondary mt-1"
                 type="click"
               >

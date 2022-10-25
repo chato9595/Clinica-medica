@@ -1,6 +1,6 @@
 import { Medico } from "./Medico.js";
 import { formatoFecha } from "./fecha.js";
-import { validadorSelect } from "./validadores.js";
+import { validadorSelect, validateDNI } from "./validadores.js";
 
 const ginecologo = new Medico(
   "Jorge",
@@ -45,7 +45,7 @@ if (turnosLS != null && turnosLS.length > 0) {
   turnos = turnosLS;
 } else {
   const mjeTurno = document.createElement("h5");
-  mjeTurno.classList.add("text-center");
+  mjeTurno.classList.add("text-center","my-5");
   mjeTurno.innerText = "No hay turnos programados";
   cardsTurnos.appendChild(mjeTurno);
 }
@@ -129,6 +129,64 @@ const formularioFiltro = document.getElementById("filtroMedico");
 const selectMedico = document.getElementById("selectorMedico");
 const aviso = document.getElementById("avisoFiltro");
 const quitarFiltro = document.getElementById("quitarFiltro");
+const formularioPaciente  = document.getElementById("filtroPaciente");
+const campoPaciente = document.getElementById("selectorPaciente");
+const quitarFiltroPaciente = document.getElementById("quitarFiltroPaciente");
+
+let DNI;
+campoPaciente.addEventListener("blur", (e) => {
+  if(validateDNI(e.target.value, campoPaciente)){
+    DNI = e.target.value;
+  }
+  
+});
+
+formularioPaciente.addEventListener("submit", (e) => {
+  e.preventDefault();
+  cardsTurnos.innerHTML = "";
+  aviso.innerHTML = "";
+  selectMedico.value = "0";
+  selectMedico.classList.remove("is-valid");
+  selectMedico.classList.remove("is-invalid");
+
+  if(validateDNI(DNI, campoPaciente)){
+    let turnosFiltrados = turnos.filter((turno) => {
+      return turno.paciente.split("(")[1].split(")")[0] == DNI;
+    }
+    );
+   if(turnosFiltrados.length > 0){
+    aviso.innerHTML = "";
+    cardsTurnos.innerHTML = "";
+    const mensaje = document.createElement("h5");
+    mensaje.classList.add("text-center");
+    mensaje.innerText = "Turnos programados para la paciente con DNI: " + DNI;
+    aviso.appendChild(mensaje);
+    mostrarTurnos(turnosFiltrados);
+    
+   }
+    else{
+      cardsTurnos.innerHTML = "";
+     aviso.innerHTML = "";
+      const mensaje = document.createElement("h5");
+      mensaje.classList.add("text-center", "my-5");
+      mensaje.innerText = "No hay turnos programados para la paciente con DNI: " + DNI;
+      aviso.appendChild(mensaje);
+    }
+  }
+});
+
+quitarFiltroPaciente.addEventListener("click", (e) => {
+  e.preventDefault();
+  cardsTurnos.innerHTML = "";
+  aviso.innerHTML = "";
+  formularioPaciente.reset();
+  campoPaciente.classList = "form-control my-2";
+  mostrarTurnos(turnos);
+});
+
+
+
+
 
 const mostrarMedicos = (medicos) => {
   medicos.forEach((medico) => {
@@ -152,6 +210,10 @@ selectMedico.addEventListener("blur", (e) => {
 
 formularioFiltro.addEventListener("submit", (e) => {
   e.preventDefault();
+  cardsTurnos.innerHTML = "";
+  aviso.innerHTML = "";
+  formularioPaciente.reset();
+  campoPaciente.classList = "form-control my-2";
   if (validadorSelect(medicoSeleccionado,selectMedico)) {
     const turnosFiltrados = turnos.filter(
       (turno) => {
@@ -171,7 +233,7 @@ formularioFiltro.addEventListener("submit", (e) => {
       cardsTurnos.innerHTML = "";
      aviso.innerHTML = "";
       const mensaje = document.createElement("h5");
-      mensaje.classList.add("text-center");
+      mensaje.classList.add("text-center","my-5");
       mensaje.innerText = "No hay turnos programados para Dr/a. " + medicoSeleccionado;
       aviso.appendChild(mensaje);
 

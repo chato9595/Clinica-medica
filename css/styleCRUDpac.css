@@ -6,7 +6,7 @@
 
 
 
-#button-up{
+#button-up {
     width: 60px;
     height: 60px;
     background: #bc226f;
@@ -25,23 +25,24 @@
     transform: scale(0);
 }
 
-.invalid-feedback{
+.invalid-feedback {
     color: rgb(240, 31, 31);
 
 }
 
-#h1_cargarPac{
-    
+#h1_cargarPac {
+
     font-weight: 500;
     color: #bc226f;
     margin-bottom: 20px;
 }
 
 .bg-rose {
-    background-color: #d383a7cf ;
+    background-color: #d383a7cf;
 }
-#buttonCargar{
-   
+
+#buttonCargar {
+
     color: white;
     border: none;
     border-radius: 5px;
@@ -51,7 +52,8 @@
     cursor: pointer;
     transition: all 300ms ease;
 }
-#buttonCargar:hover{
+
+#buttonCargar:hover {
     background-color: #E51269;
     color: white;
     border: none;
@@ -62,88 +64,123 @@
     cursor: pointer;
     transition: all 300ms ease;
     transform: scale(1.05);
-    
+
 }
-#tabla_paciente{
+
+#tabla_paciente {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    
 
-    
+
+
 }
-thead{
+
+thead {
     background-color: #D677A2;
     color: white;
     font-weight: 500;
 }
-.botonEdit{
-   
+
+.botonEdit {
+
     border: none;
     border-radius: 5px;
     padding: 8px 12px;
     font-size: 16px;
-    
+
 }
 
-.botonDelete{
+.botonDelete {
     border: none;
     border-radius: 5px;
     padding: 8px 12px;
     font-size: 16px;
 }
- @media only screen and (max-width: 992px) {
-    #tableROW{
+
+@media only screen and (max-width: 992px) {
+    #tableROW {
         display: none;
     }
-    table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
-    thead tr { 
-		display: none;
-	}
-    tr { border: 1px solid #ccc;
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        border: 1px solid #ccc;
         margin-bottom: 1rem;
     }
-    td { 
-		
+
+    td {
+
         display: flex;
-        
+
         justify-content: end;
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		 
-	}
-    .tdOptions{
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+
+    }
+
+    .tdOptions {
         display: flex;
         justify-content: space-evenly;
     }
 
-    
 
-    td:before { 
-		
-		position: absolute;
-		
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 5rem; 
-		white-space: nowrap;
-        
-        padding-left:1rem;
-	}
 
-    
-    td:nth-of-type(1):before { content: "Nombre"; }
-	td:nth-of-type(2):before { content: "Edad"; }
-	td:nth-of-type(3):before { content: "Documento"; }
-	td:nth-of-type(4):before { content: "Telefono"; }
-	td:nth-of-type(5):before { content: "Obra Social"; }
-	td:nth-of-type(6):before { content: "Sexo"; }
-	td:nth-of-type(7):before { content: "Email"; }
-	
-	#button-up{
+    td:before {
+
+        position: absolute;
+        font-weight: 600;
+
+        left: 6px;
+        width: 45%;
+        padding-right: 5rem;
+        white-space: nowrap;
+
+        padding-left: 1rem;
+    }
+
+
+    td:nth-of-type(1):before {
+        content: "Nombre";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Edad";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Documento";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Telefono";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Obra Social";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Sexo";
+    }
+
+    td:nth-of-type(7):before {
+        content: "Email";
+    }
+
+    #button-up {
         width: 45px;
         height: 45px;
         background: #bc226f;
@@ -161,6 +198,5 @@ thead{
         transition: all 300ms ease;
         transform: scale(0);
     }
-    
+
 }
-    

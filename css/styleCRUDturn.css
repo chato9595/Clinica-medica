@@ -53,6 +53,7 @@
         display: flex;
 
         justify-content: end;
+     
         border: none;
         border-bottom: 1px solid #eee;
         position: relative;
@@ -69,8 +70,10 @@
     td:before {
 
         position: absolute;
+        font-weight: 600;
+        
 
-        top: 6px;
+        
         left: 6px;
         width: 45%;
         padding-right: 5rem;

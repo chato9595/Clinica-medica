@@ -1,7 +1,18 @@
 export const pacientesSelect = () => {
   let pacientesLS = JSON.parse(localStorage.getItem("Lista Pacientes"));
+  
   const campoPaciente = document.getElementById("paciente");
   if (pacientesLS != null) {
+    pacientesLS.sort((a, b) => {
+      if (a.nombre > b.nombre) {
+        return 1;
+      }
+      if (a.nombre < b.nombre) {
+        return -1;
+      }
+      return 0;
+    });
+    
     pacientesLS.forEach((paciente) => {
       let option = document.createElement("option");
       option.value = paciente.nombre + " (" + paciente.dni + ")";

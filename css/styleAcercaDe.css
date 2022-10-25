@@ -37,7 +37,7 @@ object-fit:cover;
     object-fit: cover;
   }
   .div_acercade_linea{
-    height: 10vh;
+    height: 8vh;
     background-color:  #bc226f;
     width: 0.5vw;
   }
@@ -76,7 +76,7 @@ object-fit:cover;
       right: 45vw;
   }
   .div_acercade_linea{
-    height: 25vh;
+    height: 15vh;
     background-color:  #bc226f;
     width: 0.5vw;
   }
