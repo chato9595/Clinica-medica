@@ -11,10 +11,10 @@
 .letra_fondo {
   font-family: 'Playfair Display', sans-serif;
   /* font-style: italic; */
- 
+
   color: #bc226f;
-  background: rgb(251,204,233);
-background: linear-gradient(180deg, rgba(251, 204, 233, 0.404) 0%, rgba(255,255,255,1) 100%);
+  background: rgb(251, 204, 233);
+  background: linear-gradient(180deg, rgba(251, 204, 233, 0.404) 0%, rgba(255, 255, 255, 1) 100%);
   font-size: 4.2rem;
   font-weight: 600;
 
@@ -149,7 +149,6 @@ background: linear-gradient(180deg, rgba(251, 204, 233, 0.404) 0%, rgba(255,255,
 
 
 
-
   .layered-image {
     background: url("https://www.interitehealthcare.com.au/wp-content/uploads/2020/12/woman-visiting-female-doctor-scaled.jpg");
 
@@ -169,17 +168,17 @@ background: linear-gradient(180deg, rgba(251, 204, 233, 0.404) 0%, rgba(255,255,
 
 .carousel-caption {
 
-width: 100vw;
+  width: 100vw;
   background-color: rgba(214, 119, 162, 0.871);
   left: 0% !important;
   font-size: 1.5rem;
-  
-  
+
+
 }
 
 
 
-@media only screen and (min-width: 353px) and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .img_carousel {
     height: 40vh;
 
@@ -191,17 +190,18 @@ width: 100vw;
   }
 
   .letra_fondo {
-    
- 
+
+
     color: #bc226f;
     background-color: #ffffffa1;
-    
-    font-size: 2.5rem;
+
+    font-size: 2.2rem;
     font-weight: 600;
 
     width: 100%;
     padding-left: 0px;
-    padding-top: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
     height: 15vh;
 
 
@@ -220,7 +220,7 @@ width: 100vw;
 
   .carousel-caption {
     height: 15vh;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 
 
   }
