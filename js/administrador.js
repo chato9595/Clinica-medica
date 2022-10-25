@@ -84,9 +84,9 @@ campoMedico.addEventListener("blur", (e) => {
 });
 
 campoFecha.addEventListener("blur", (e) => {
-  console.log(e.target.value);
+  
   validadorFecha(e.target.value, campoFecha);
-  console.log(validadorFecha(e.target.value, campoFecha));
+ 
   if (validadorFecha(e.target.value, campoFecha)) {
     fecha = e.target.value;
     campoHorario.innerHTML = `<option value="0">Seleccione un horario</option>`;

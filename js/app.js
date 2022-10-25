@@ -145,7 +145,7 @@ let medicoSeleccionado = "0";
 selectMedico.addEventListener("blur", (e) => {
   if(validadorSelect(e.target.value,selectMedico)){
   medicoSeleccionado = e.target.value;
-  console.log(medicoSeleccionado);
+  
   }
 });
 
