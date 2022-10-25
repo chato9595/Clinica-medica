@@ -370,13 +370,14 @@
                 <input
                   id="telefonoContacto"
                   required
-                  type="number"
+                  type="text"
                   class="form-control"
                   placeholder="Teléfono (celular sin 0 ni 15)"
                   aria-label="telephone"
                   aria-describedby="basic-addon1"
-                  min="0"
-                  oninput="validity.valid||(value='');"
+                  minlength="10"
+                  maxlength="11"
+                  
                 />
                 <div id="PhoneFeedback" class="invalid-feedback">
                   Ingrese un teléfono válido
@@ -623,7 +624,7 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/contacto.js"></script>
+    <script type="module" src="./js/contacto.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="./js/login.js"></script>

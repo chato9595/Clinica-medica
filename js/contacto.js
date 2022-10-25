@@ -1,9 +1,12 @@
+import { validateNumber } from "./validadores.js";
+
+
 document.getElementById("button-up").addEventListener("click", scrollUp);
 
 const campoNombre = document.getElementById("nombreContacto");
 const campoEmail = document.getElementById("emailContacto");
 const campoTelefono = document.getElementById("telefonoContacto");
-const campoMensaje = document.getElementById("mensajeContacto");
+
 const formularioContacto = document.getElementById("formMensaje");
 
 formularioContacto.addEventListener("submit", (e) => {
@@ -11,8 +14,8 @@ formularioContacto.addEventListener("submit", (e) => {
   if (
     validateName(campoNombre.value, campoNombre) &&
     validateEmail(campoEmail.value, campoEmail) &&
-    validateNumber(campoTelefono.value, campoTelefono) &&
-    validateName(campoMensaje.value, campoMensaje)
+    validateNumber(campoTelefono.value, campoTelefono)
+    
   ) {
     e.preventDefault();  
     Swal.fire({
@@ -22,11 +25,24 @@ formularioContacto.addEventListener("submit", (e) => {
       confirmButtonText: "Aceptar",
     });
     formularioContacto.reset();
+    campoNombre.classList = "form-control";
+    campoEmail.classList = "form-control";
+    campoTelefono.classList = "form-control";
+    
+    
     
   }
-
-  
+  else{
+    e.preventDefault();
+    Swal.fire({
+      title: "Error",
+      text: "Revise los campos",
+      icon: "warning",
+      confirmButtonText: "Aceptar",
+    });
+  }
 });
+
 
 function scrollUp() {
   var currentScroll = document.documentElement.scrollTop;
@@ -36,9 +52,7 @@ function scrollUp() {
   }
 }
 
-///
-
-buttonUp = document.getElementById("button-up");
+const buttonUp = document.getElementById("button-up");
 
 window.onscroll = function () {
   var scroll = document.documentElement.scrollTop;
@@ -80,15 +94,7 @@ const validateEmail = (valor, campo) => {
   campo.classList = "form-control is-valid";
   return true;
 };
-const validateNumber = (valor, campo) => {
-  // que no este vacio
-  if (valor.trim().length < 8 || valor.trim().length > 11) {
-    campo.classList = "form-control is-invalid";
-    return false;
-  }
-  campo.classList = "form-control is-valid";
-  return true;
-};
+ 
 
 campoNombre.addEventListener("blur", (e) => {
   validateName(e.target.value, campoNombre);
@@ -99,6 +105,4 @@ campoEmail.addEventListener("blur", (e) => {
 campoTelefono.addEventListener("blur", (e) => {
   validateNumber(e.target.value, campoTelefono);
 });
-campoMensaje.addEventListener("blur", (e) => {
-  validateName(e.target.value, campoMensaje);
-});
+
