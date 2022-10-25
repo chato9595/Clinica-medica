@@ -51,14 +51,14 @@ article a:hover {
     cursor: pointer;
 
 }
-
+/* 
 .navbar-nav {
     float: none;
     margin: 0 24vw;
     display: block;
     text-align: center;
 
-}
+} */
 .active{
     color:#E51269 !important;
 }

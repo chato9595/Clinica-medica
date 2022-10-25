@@ -33,18 +33,18 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">
+          <a class="navbar-brand salirDeAdmin" href="../index.html">
             <img
               id="headerLogo"
               src="../assets/wma_PNG_v5.png"
               alt="Logo"
-              class="d-inline-block align-text-top me-3"
+              class="d-inline-block align-text-top"
             />
           </a>
           <button
-            class="navbar-toggler me-2"
+            class="navbar-toggler me-2 "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -54,11 +54,11 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav d-flex">
+          <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
               <li class="nav-item links_header">
                 <a
-                  class="nav-link  me-2"
+                  class="nav-link mx-2 "
                   aria-current="page"
                   href="../views/admin.html"
                   >Panel</a
@@ -66,7 +66,7 @@
               </li>
               <li class="nav-item links_header">
                 <a
-                  class="nav-link  me-2 active"
+                  class="nav-link mx-2 active"
                   aria-current="page"
                   href="../views/CRUDpac.html"
                   >Cargar Paciente</a
@@ -74,14 +74,16 @@
               </li>
               <li class="nav-item links_header">
                 <a
-                  class="nav-link  ms-2"
+                  class="nav-link mx-2"
                   aria-current="page"
                   href="../views/CRUDturn.html"
                   >Cargar Turno</a
                 >
               </li>
             </ul>
+            <div class="mx-auto"></div>
           </div>
+          
         </div>
       </nav>
     </header>
@@ -229,7 +231,7 @@
       <section class="container-fluid">
         <div class="row">
           <article class="mt-5 col-sm-12 col-md-5 text-center">
-            <a href="../index.html"
+            <a href="../index.html" class="salirDeAdmin"
               ><img
                 src="../assets/wma_PNG_v5.png"
                 alt="Logo Woman's Medical Assistance"
@@ -237,19 +239,19 @@
             /></a>
 
             <div class="RedesFooter">
-              <a class="text-secondary" href="https://www.facebook.com"
+              <a class="text-secondary salirDeAdmin" href="https://www.facebook.com"
                 ><i class="fa-brands fa-square-facebook icons"></i
               ></a>
-              <a class="text-secondary" href="https://www.twitter.com"
+              <a class="text-secondary salirDeAdmin" href="https://www.twitter.com"
                 ><i class="fa-brands fa-square-twitter icons"></i
               ></a>
-              <a class="text-secondary" href="https://www.instagram.com"
+              <a class="text-secondary salirDeAdmin" href="https://www.instagram.com"
                 ><i class="fa-brands fa-square-instagram icons"></i
               ></a>
-              <a class="text-secondary" href="https://www.youtubetube.com"
+              <a class="text-secondary salirDeAdmin" href="https://www.youtubetube.com"
                 ><i class="fa-brands fa-youtube"></i
               ></a>
-              <a class="text-secondary" href="https://www.linkedin.com"
+              <a class="text-secondary salirDeAdmin" href="https://www.linkedin.com"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
             </div>
@@ -270,7 +272,7 @@
 
             <i class="fa-solid fa-envelope fa-1x"></i>
 
-            <a href="../views/Error404.html" class="nav-link mb-4 txt_footer"
+            <a href="../views/Error404.html" class="nav-link mb-4 txt_footer salirDeAdmin"
               >wmassistance@contacto.com</a
             >
           </article>
@@ -281,16 +283,16 @@
             <h2 class="mb-3 titulosFooter text-center fs-4">SECCIONES</h2>
             <a
               href="../views/Error404.html"
-              class="nav-link mt-4 mb-1 txt_footer"
+              class="nav-link mt-4 mb-1 txt_footer salirDeAdmin"
               >Informes</a
             >
-            <a href="../views/Error404.html" class="nav-link my-1 txt_footer"
+            <a href="../views/Error404.html" class="nav-link my-1 txt_footer salirDeAdmin"
               >Horarios</a
             >
-            <a href="../views/Error404.html" class="nav-link my-1 txt_footer"
+            <a href="../views/Error404.html" class="nav-link my-1 txt_footer salirDeAdmin"
               >Novedades</a
             >
-            <a href="../views/Error404.html" class="nav-link my-1 txt_footer"
+            <a href="../views/Error404.html" class="nav-link my-1 txt_footer salirDeAdmin"
               >Especialidades</a
             >
           </article>
@@ -314,4 +316,5 @@
     ></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="../js/CRUDpac.js"></script>
+    <script type="module" src="../js/seguridad.js"></script>
 </html>

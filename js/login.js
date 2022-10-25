@@ -4,6 +4,7 @@ const formulario = document.getElementById("formUsuario");
 
 const user = "admin";
 const pass = "rolling";
+let acceso = false;
 
 
 function validateUser() {
@@ -30,8 +31,11 @@ function validateForm() {
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   if (validateForm()) {
-    location.reload();
+    acceso = true;
+    sessionStorage.setItem("acceso", acceso);
     window.open("../views/admin.html");
+    sessionStorage.removeItem("acceso");
+   location.reload();
   } else {
     Swal.fire({
       title: "Error",

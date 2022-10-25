@@ -29,7 +29,7 @@ export const validateName = (valor, campo) => {
     campo.classList = "form-control is-invalid";
     return false;
   }
-  const regex = /^(?![\s.]+$)[a-zA-Z\s.]*$/;
+  const regex= /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
   if (!regex.test(valor)) {
     campo.classList = "form-control is-invalid";
     return false;
