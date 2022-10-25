@@ -44,7 +44,8 @@ const cardsTurnos = document.getElementById("cardsTurnos");
 if (turnosLS != null && turnosLS.length > 0) {
   turnos = turnosLS;
 } else {
-  const mjeTurno = document.createElement("p");
+  const mjeTurno = document.createElement("h5");
+  mjeTurno.classList.add("text-center");
   mjeTurno.innerText = "No hay turnos programados";
   cardsTurnos.appendChild(mjeTurno);
 }

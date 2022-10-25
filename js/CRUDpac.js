@@ -189,6 +189,15 @@ formularioPaciente.addEventListener("submit", (e) => {
     obraSocial = "";
     sexo = "";
     email = "";
+    campoNombre.classList="form-control";
+  campoFecha.classList="form-control";
+  campoDni.classList="form-control";
+  campoTelefono.classList="form-control";
+  campoObraSocial.classList="form-select";
+  campoSexo.classList="form-select";
+  campoEmail.classList="form-control";
+
+
   } else {
     Swal.fire({
       title: "Error!",

@@ -39,7 +39,7 @@ formulario.addEventListener("submit", (e) => {
   } else {
     Swal.fire({
       title: "Error",
-      text: "Acceso denegado",
+      text: "Credenciales inválidas",
       icon: "warning",
     });
   }
