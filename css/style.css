@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 * {
 
@@ -7,6 +8,9 @@
 
 
 .letra_fondo {
+  font-family: 'Nunito', sans-serif;
+  font-style: italic;
+  font-weight: 300;
   color: #bc226f;
   font-size: 4.2rem;
   font-weight: 400;
@@ -185,11 +189,11 @@ width: 100vw;
   }
 
   .letra_fondo {
-    color: #bc226f;
+    color:#bc226f;
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 600;
 
-    background-color: #d677a225;
+    background-color: #d677a279;
     width: 100%;
     padding-left: 0px;
     padding-top: 1rem;

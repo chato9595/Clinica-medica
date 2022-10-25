@@ -3,7 +3,7 @@ const contraseña = document.getElementById("contrasenaLogin");
 const formulario = document.getElementById("formUsuario");
 
 const user = "admin";
-const pass = 1234;
+const pass = "rolling";
 
 
 function validateUser() {
@@ -31,7 +31,7 @@ formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   if (validateForm()) {
     location.reload();
-    window.open("admin.html");
+    window.open("../views/admin.html");
   } else {
     Swal.fire({
       title: "Error",
@@ -40,3 +40,26 @@ formulario.addEventListener("submit", (e) => {
     });
   }
 });
+  
+document.getElementById("button-up").addEventListener("click", scrollUp);
+function scrollUp() {
+  let currentScroll = document.documentElement.scrollTop;
+
+  if (currentScroll > 0) {
+    window.scrollTo(0, currentScroll - currentScroll / 1);
+  }
+}
+
+///
+
+const buttonUp = document.getElementById("button-up");
+
+window.onscroll = function () {
+  let scroll = document.documentElement.scrollTop;
+
+  if (scroll > 5) {
+    buttonUp.style.transform = "scale(1)";
+  } else if (scroll < 5) {
+    buttonUp.style.transform = "scale(0)";
+  }
+};

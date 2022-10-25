@@ -31,7 +31,6 @@ window.onscroll = function () {
   }
 };
 
-
 const formulario = document.getElementById("formularioTurno");
 const campoPaciente = document.getElementById("paciente");
 const campoEspecialidad = document.getElementById("especialidad");
@@ -43,49 +42,12 @@ const campoDescripcion = document.getElementById("descripcion");
 
 const botonCargarTurno = document.getElementById("cargarTurno");
 
-
-
 let paciente = "";
 let especialidad = "";
 let medico = "";
 let fecha = "";
 let horario = "";
 let descripcion = "";
-
-const ginecologo = new Medico(
-  "Jorge",
-  "Paz Rojas",
-  "3865456123",
-  "Ginecología"
-);
-const dermatologo = new Medico(
-  "Martin",
-  "Stisman",
-  "3811246514",
-  "Dermatología"
-);
-const nutricionista = new Medico(
-  "Mariana",
-  "Gonzalez",
-  "3814561234",
-  "Nutrición"
-);
-const oncologo = new Medico("Rafael", "Soria", "3814524354", "Oncología");
-const endocrinologo = new Medico(
-  "Edith",
-  "Pastoriza",
-  "3811231446",
-  "Endocrinología"
-);
-
-const medicos = [
-  ginecologo,
-  dermatologo,
-  nutricionista,
-  oncologo,
-  endocrinologo,
-];
-localStorage.setItem("Lista Medicos", JSON.stringify(medicos));
 
 let turnosLS = JSON.parse(localStorage.getItem("Lista turnos"));
 let turnos = [];
@@ -100,7 +62,6 @@ if (turnosLS != null) {
 pacientesSelect();
 
 campoPaciente.addEventListener("blur", (e) => {
- 
   validadorSelect(campoPaciente.value, campoPaciente);
   if (validadorSelect(campoPaciente.value, campoPaciente)) {
     paciente = campoPaciente.value;
@@ -128,9 +89,8 @@ campoFecha.addEventListener("blur", (e) => {
   console.log(validadorFecha(e.target.value, campoFecha));
   if (validadorFecha(e.target.value, campoFecha)) {
     fecha = e.target.value;
-    campoHorario.innerHTML= `<option value="0">Seleccione un horario</option>`
+    campoHorario.innerHTML = `<option value="0">Seleccione un horario</option>`;
     horariosSelect();
-    
   }
 });
 campoHorario.addEventListener("blur", (e) => {
@@ -163,8 +123,6 @@ formulario.addEventListener("submit", (e) => {
   fecha = campoFecha.value;
   horario = campoHorario.value;
   descripcion = campoDescripcion.value;
-
- 
 
   if (
     validadorSelect(paciente, campoPaciente) &&
@@ -215,7 +173,6 @@ formulario.addEventListener("submit", (e) => {
     campoMedico.classList.remove("is-valid");
     campoFecha.classList.remove("is-valid");
     campoHorario.classList.remove("is-valid");
-
   } else {
     Swal.fire({
       title: "Error al cargar turno",
@@ -233,4 +190,3 @@ export const updateTabla = () => {
     cargarTurnoTabla(turno);
   });
 };
-

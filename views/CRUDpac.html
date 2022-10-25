@@ -13,6 +13,10 @@
       content="medical clinic focused on the diagnosis and treatment of women's diseases"
     />
     <title>Woman's Medical Assistance</title>
+    <link rel="icon" href="../assets/favicon.png" />
+    <link rel="stylesheet" href="../css/styleCRUDpac.css" />
+    <link rel="stylesheet" href="../css/styleFooter.css" />
+    <link rel="stylesheet" href="../css/styleHeader.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,17 +29,71 @@
       src="https://kit.fontawesome.com/88922d1405.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../css/styleCRUDpac.css" />
+    
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img
+              id="headerLogo"
+              src="../assets/wma_PNG_v5.png"
+              alt="Logo"
+              class="d-inline-block align-text-top me-3"
+            />
+          </a>
+          <button
+            class="navbar-toggler me-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex">
+              <li class="nav-item links_header">
+                <a
+                  class="nav-link  me-2"
+                  aria-current="page"
+                  href="../views/admin.html"
+                  >Panel</a
+                >
+              </li>
+              <li class="nav-item links_header">
+                <a
+                  class="nav-link  me-2 active"
+                  aria-current="page"
+                  href="../views/CRUDpac.html"
+                  >Cargar Paciente</a
+                >
+              </li>
+              <li class="nav-item links_header">
+                <a
+                  class="nav-link  ms-2"
+                  aria-current="page"
+                  href="../views/CRUDturn.html"
+                  >Cargar Turno</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <main class="container">
-      <section class="text-center">
-        <hr />
+      <section class="text-center mt-3">
+        
         <h1 id="h1_cargarPac">CARGAR PACIENTE</h1>
         <hr />
       </section>
       <section
-        class="bg-secondary container text-light py-3 rounded col-lg-6 col-sm-12"
+        class=" bg-rose container text-light py-3 rounded col-lg-6 col-sm-12"
       >
         <form id="formPaciente">
           <div class="mb-3">
@@ -166,8 +224,87 @@
         </table>
       </section>
     </main>
+    
+    <footer class="pb-1 bg-dark text-secondary">
+      <section class="container-fluid">
+        <div class="row">
+          <article class="mt-5 col-sm-12 col-md-5 text-center">
+            <a href="./index.html"
+              ><img
+                src="./assets/wma_PNG_v5.png"
+                alt="Logo Woman's Medical Assistance"
+                class="w-75"
+            /></a>
+
+            <div class="RedesFooter">
+              <a class="text-secondary" href="https://www.facebook.com"
+                ><i class="fa-brands fa-square-facebook icons"></i
+              ></a>
+              <a class="text-secondary" href="https://www.twitter.com"
+                ><i class="fa-brands fa-square-twitter icons"></i
+              ></a>
+              <a class="text-secondary" href="https://www.instagram.com"
+                ><i class="fa-brands fa-square-instagram icons"></i
+              ></a>
+              <a class="text-secondary" href="https://www.youtubetube.com"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a class="text-secondary" href="https://www.linkedin.com"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="col-sm-12 col-md-4 mt-4 text-center d-flex flex-column justify-content-center px-2"
+          >
+            <h2 class="titulosFooter pt-3 mb-2 fs-4">CONTACTO</h2>
+
+            <i class="fa-solid fa-location-dot fa-1x mb-1 mt-2"></i>
+            <p class="mb-2 txt_footer">General Paz, 576</p>
+            <p class="mb-2 txt_footer">San Miguel de Tucumán</p>
+
+            <i class="fa-solid fa-phone fa-1x txt_footer"></i>
+
+            <p class="mb-2 txt_footer">381 987 6543</p>
+
+            <i class="fa-solid fa-envelope fa-1x"></i>
+
+            <a href="views/error404.html" class="nav-link mb-4 txt_footer"
+              >wmassistance@contacto.com</a
+            >
+          </article>
+
+          <article
+            class="col-sm-12 col-md-3 d-flex flex-column text-center justify-content-center"
+          >
+            <h2 class="mb-3 titulosFooter text-center fs-4">SECCIONES</h2>
+            <a
+              href="./views/Error404.html"
+              class="nav-link mt-4 mb-1 txt_footer"
+              >Informes</a
+            >
+            <a href="./views/Error404.html" class="nav-link my-1 txt_footer"
+              >Horarios</a
+            >
+            <a href="./views/Error404.html" class="nav-link my-1 txt_footer"
+              >Novedades</a
+            >
+            <a href="./views/Error404.html" class="nav-link my-1 txt_footer"
+              >Especialidades</a
+            >
+          </article>
+        </div>
+        <div class="text-center mt-4">
+          <p id="id_copyright">
+            &copy; Todos los derechos reservados - Woman's Medical Assistance
+            2022
+          </p>
+        </div>
+      </section>
+    </footer>
     <div id="button-up">
-      <i class="fas fa-chevron-up"></i>
+      <span class="fas fa-chevron-up"></span>
     </div>
 
     <script
