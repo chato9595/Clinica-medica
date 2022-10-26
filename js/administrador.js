@@ -77,6 +77,14 @@ campoEspecialidad.addEventListener("blur", (e) => {
 });
 
 campoMedico.addEventListener("blur", (e) => {
+  campoFecha.value="";
+  campoFecha.classList.remove("is-valid");
+  campoFecha.classList.remove("is-invalid");
+  campoHorario.value="0";
+  campoHorario.innerHTML=`<option value="0">Seleccione un horario</option>`;
+  campoHorario.classList.remove("is-valid");
+  campoHorario.classList.remove("is-invalid");
+  
   validadorSelect(e.target.value, campoMedico);
   if (validadorSelect(e.target.value, campoMedico)) {
     medico = e.target.value;
