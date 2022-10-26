@@ -66,6 +66,8 @@ Todos los enlaces a páginas que no esten disponibles lo redigirán a una págin
 
 		Nota:  Cuando se carga un turno para un determinado médico en una determinada fecha y horario, dicho horario se excluya para futuras selecciones.
 
+### Sitio de prueba
+https://womansmedicalassistance.netlify.app/
 ### Contribuidores
 - Paula Guillén [@paulag1](https://github.com/paulag1/) 
 - Candela Mercado [CandelaMercado00](https://github.com/CandelaMercado00) 
