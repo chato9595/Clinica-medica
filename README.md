@@ -69,7 +69,7 @@ Todos los enlaces a páginas que no esten disponibles lo redigirán a una págin
 ### Sitio de prueba
 https://womansmedicalassistance.netlify.app/
 ### Contribuidores
-- Paula Guillén [@paulag1](https://github.com/paulag1/) 
+- Paula Guillén [paulag1](https://github.com/paulag1/) 
 - Candela Mercado [CandelaMercado00](https://github.com/CandelaMercado00) 
 - Félix Diaz [felixgerardodiaz](https://github.com/felixgerardodiaz)
 - Marcos Almirón [chato9595](https://github.com/chato9595) 
