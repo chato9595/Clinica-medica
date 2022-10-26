@@ -33,10 +33,15 @@ export const eliminarTurno = (id) => {
       turnos.splice(indexBorrar, 1);
       localStorage.setItem("Lista turnos", JSON.stringify(turnos));
       updateTabla();
+      
       Swal.fire({
         title: "Turno eliminado con éxito",
         icon: "success",
-      });
+      }).then((result) => {
+        location.reload();
+      }
+      );
     }
   });
 };
+  

@@ -29,9 +29,20 @@ export const eliminarPaciente = (dni) => {
         if (result.isConfirmed) {
             pacientes.splice(indiceTarget, 1);
             localStorage.setItem("Lista Pacientes", JSON.stringify(pacientes));
-            Swal.fire("Eliminado!", "El paciente ha sido eliminado", "success");
+            
             actualizarTabla();
+            Swal.fire({
+                title: "Paciente eliminado con exito",
+                icon: "success",
+            }).then((result) => {
+                location.reload();
+            }
+            );
         }
     });
+};
 
-}
+
+           
+
+ 
