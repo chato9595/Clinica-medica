@@ -15,7 +15,7 @@ Repositorio del sitio web de Woman´s Medical Assistance
 En la sección principal del sitio los usuarios tendrán acceso a las ultimas noticias relacionadas con la Woman´s Clinical Assistance o con la medicina en general.
 En la parte superior de la página se encuentran los links de acceso al panel de administrador (que solo accederá el administrador de turnos), la página "Acerca de", que describe los valores de la institución y están las fotografías de sus creadores.
 También hay un enlace de regreso a la pagina de Inicio, el cual se encuentra también en el logo de la clínica, tanto en el navbar como en el footer.
-Además, puede enviar un mensaje a la clínica a través del formulario de contacto, donde se le solicitará: nombre, teléfono, correo electrónico y un mensaje de no más de 200 caracteres.
+Además, puede enviar un mensaje a la clínica a través del formulario de contacto, donde se le solicitará: nombre, teléfono, correo electrónico y un mensaje de no más de 200 caracteres. A continuación se encuentran un mapa funcional con la ubicación de la clínica y otros datos de contacto.
 En la sección final se encontrarán con testimonios de pacientes que hayan sido atendidos en la clínica.
 
 
@@ -63,7 +63,7 @@ Permite seleccionar las siguientes opciones:
 - Redactar descripción breve relacionada al paciente.
 
 ### Error 404
-Todos los enlaces a páginas que no esten disponibles lo redigirán a una página de error404. Una vez allí hay un botón para regresar al inicio.
+Todos los enlaces a páginas que no esten disponibles lo redirigirán a una página de error404. Una vez allí hay un botón para regresar al inicio.
 
 
 		Nota:  Cuando se carga un turno para un determinado médico en una determinada fecha y horario, dicho horario se excluya para futuras selecciones.
