@@ -15,7 +15,7 @@
   color: #bc226f;
   background: rgb(251, 204, 233);
   background: linear-gradient(180deg, rgba(251, 204, 233, 0.404) 0%, rgba(255, 255, 255, 1) 100%);
-  font-size: 4.2rem;
+  font-size: 4.5rem;
   font-weight: 600;
 
   width: 100%;
@@ -114,6 +114,23 @@
 }
 
 @media screen and (max-width: 768px) {
+  .letra_fondo {
+
+
+    color: #bc226f;
+    background-color: #ffffffa1;
+
+    font-size: 2.2rem;
+    font-weight: 600;
+
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+    height: 15vh;
+
+
+  }
 
 
   .section-bienvenida {
@@ -163,13 +180,32 @@
     height: 12vh;
 
   }
+ 
 
   .carousel-caption {
-    height: 12vh;
-    font-size: 1.3rem;
+    height: 15vh;
+    font-size: 1.5rem;
 
 
   }
+  .letra_fondo {
+
+
+    color: #bc226f;
+    background-color: #ffffffa1;
+
+    font-size: 2.2rem;
+    font-weight: 600;
+
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+    height: 15vh;
+
+
+  }
+ 
 
 
   .layered-image {
@@ -182,7 +218,7 @@
 }
 
 .img_carousel {
-  height: 55vh;
+  height: 65vh;
 
   object-fit: cover;
   object-position: 0 18%;
@@ -203,23 +239,7 @@
 
   }
 
-  .letra_fondo {
-
-
-    color: #bc226f;
-    background-color: #ffffffa1;
-
-    font-size: 2.2rem;
-    font-weight: 600;
-
-    width: 100%;
-    padding-left: 0px;
-    padding-top: 0.7rem;
-    padding-bottom: 0.5rem;
-    height: 15vh;
-
-
-  }
+  
 
   .img1 {
 
@@ -249,11 +269,17 @@
   color: #D677A2;
 }
 
-@media screen and (max-width: 30em) and (orientation: landscape) {
-  /* … */
+@media screen and (max-height: 450px) and (orientation: landscape) {
+  .layered-image {
+    background: url("https://www.interitehealthcare.com.au/wp-content/uploads/2020/12/woman-visiting-female-doctor-scaled.jpg");
+  
+    height: 82vh;
+    background-size: cover;
+  
+  }
 
   .img_carousel {
-    height: 65vh;
+    height: 70vh;
   
     object-fit: cover;
     object-position: 0 18%;
@@ -263,14 +289,14 @@
     
     font-size: 1.7rem;
     font-weight: 600;
-    height: 20vh;
+    height: 25vh;
   
     width: 100%;
   
   
   }
   .carousel-caption{
-    height: 10vh;
+    height: 20vh;
     font-size: 1.3rem;
   }
 
@@ -297,6 +323,28 @@
     background-color: rgba(214, 119, 162, 0.871);
     left: 0% !important;
     font-size: 1.5rem;
+    
+  
+  
+  }
+  .img_carousel {
+    height: 65vh;
+  
+    object-fit: cover;
+    object-position: 0 18%;
+  
+  }
+  .letra_fondo {
+    font-family: 'Playfair Display', sans-serif;
+    /* font-style: italic; */
+  
+    color: #bc226f;
+    background: rgb(251, 204, 233);
+    background: linear-gradient(180deg, rgba(251, 204, 233, 0.404) 0%, rgba(255, 255, 255, 1) 100%);
+    font-size: 4.5rem;
+    font-weight: 600;
+  
+    width: 100%;
   
   
   }
