@@ -133,7 +133,7 @@ const formularioPaciente  = document.getElementById("filtroPaciente");
 const campoPaciente = document.getElementById("selectorPaciente");
 const quitarFiltroPaciente = document.getElementById("quitarFiltroPaciente");
 
-let DNI;
+let DNI= "";
 campoPaciente.addEventListener("blur", (e) => {
   if(validateDNI(e.target.value, campoPaciente)){
     DNI = e.target.value;
@@ -150,6 +150,7 @@ formularioPaciente.addEventListener("submit", (e) => {
   selectMedico.classList.remove("is-invalid");
 
   if(validateDNI(DNI, campoPaciente)){
+    
     let turnosFiltrados = turnos.filter((turno) => {
       return turno.paciente.split("(")[1].split(")")[0] == DNI;
     }
@@ -159,7 +160,7 @@ formularioPaciente.addEventListener("submit", (e) => {
     cardsTurnos.innerHTML = "";
     const mensaje = document.createElement("h5");
     mensaje.classList.add("text-center");
-    mensaje.innerText = "Turnos programados para la paciente con DNI: " + DNI;
+    mensaje.innerText = "Turnos programados para paciente con DNI: " + DNI;
     aviso.appendChild(mensaje);
     mostrarTurnos(turnosFiltrados);
     
@@ -169,17 +170,30 @@ formularioPaciente.addEventListener("submit", (e) => {
      aviso.innerHTML = "";
       const mensaje = document.createElement("h5");
       mensaje.classList.add("text-center", "my-5");
-      mensaje.innerText = "No hay turnos programados para la paciente con DNI: " + DNI;
+      mensaje.innerText = "No hay turnos programados para paciente con DNI: " + DNI;
       aviso.appendChild(mensaje);
     }
+    campoPaciente.value = "";
+    DNI= "";
+    campoPaciente.classList.remove("is-valid");
+
+  } else  {
+    const mensaje = document.createElement("h5");
+      mensaje.classList.add("text-center", "my-5");
+      mensaje.innerText = "El DNI ingresado no es válido.";
+      aviso.appendChild(mensaje);
   }
 });
+
+
 
 quitarFiltroPaciente.addEventListener("click", (e) => {
   e.preventDefault();
   cardsTurnos.innerHTML = "";
   aviso.innerHTML = "";
   formularioPaciente.reset();
+
+ DNI = "0";
   campoPaciente.classList = "form-control my-2";
   mostrarTurnos(turnos);
 });
@@ -238,9 +252,19 @@ formularioFiltro.addEventListener("submit", (e) => {
       aviso.appendChild(mensaje);
 
     }
+    selectMedico.value = "0";
+    medicoSeleccionado = "0";
+    selectMedico.classList.remove("is-valid");
 
+
+  } else {
+    const mensaje = document.createElement("h5");
+    mensaje.classList.add("text-center", "my-5");
+    mensaje.innerText = "Seleccione un médico.";
+    aviso.appendChild(mensaje); 
   }
 });
+
 
 quitarFiltro.addEventListener("click", (e) => {
   e.preventDefault();

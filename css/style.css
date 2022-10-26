@@ -22,6 +22,15 @@
 
 
 }
+.carousel-caption {
+
+  width: 100vw;
+  background-color: rgba(214, 119, 162, 0.871);
+  left: 0% !important;
+  
+
+
+}
 
 
 
@@ -94,10 +103,13 @@
   display: none;
 }
 
+
+
 @media only screen and (max-width: 576px) {
   .hr_news {
     display: block;
   }
+ 
 
 }
 
@@ -121,6 +133,12 @@
 
   .cards {
     border-style: none !important;
+  }
+  .carousel-caption {
+    height: 15vh;
+    font-size: 1.3rem;
+
+
   }
 }
 
@@ -146,7 +164,12 @@
 
   }
 
+  .carousel-caption {
+    height: 12vh;
+    font-size: 1.3rem;
 
+
+  }
 
 
   .layered-image {
@@ -166,19 +189,10 @@
 
 }
 
-.carousel-caption {
-
-  width: 100vw;
-  background-color: rgba(214, 119, 162, 0.871);
-  left: 0% !important;
-  font-size: 1.5rem;
-
-
-}
 
 
 
-@media only screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .img_carousel {
     height: 40vh;
 
@@ -218,12 +232,7 @@
 
   }
 
-  .carousel-caption {
-    height: 15vh;
-    font-size: 1.3rem;
-
-
-  }
+  
 
 
 }
@@ -238,4 +247,58 @@
 
 #title_contacto {
   color: #D677A2;
+}
+
+@media screen and (max-width: 30em) and (orientation: landscape) {
+  /* … */
+
+  .img_carousel {
+    height: 65vh;
+  
+    object-fit: cover;
+    object-position: 0 18%;
+  
+  }
+  .letra_fondo {
+    
+    font-size: 1.7rem;
+    font-weight: 600;
+    height: 20vh;
+  
+    width: 100%;
+  
+  
+  }
+  .carousel-caption{
+    height: 10vh;
+    font-size: 1.3rem;
+  }
+
+  .cards{
+    height: 69vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+  }
+  #card_recon{
+    height: 69vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+}
+
+@media screen and (min-width: 992px) {
+  .carousel-caption {
+
+    width: 100vw;
+    background-color: rgba(214, 119, 162, 0.871);
+    left: 0% !important;
+    font-size: 1.5rem;
+  
+  
+  }
+  
 }
